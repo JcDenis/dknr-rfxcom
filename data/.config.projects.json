@@ -1,0 +1,8 @@
+{
+    "projects": {
+        "DkRFXcom": {
+            "credentialSecret": "dknr-rfxcom"
+        }
+    },
+    "activeProject": "dknr-rfxcom"
+}

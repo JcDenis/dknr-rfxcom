@@ -1,0 +1,39 @@
+# Required the following environement variables:
+# - DKNR_USERNAME
+# - DKNR_PASSWORD
+# - DKNR_SECRET
+#
+name: DKNRRfxcom
+
+services: 
+  dknr_rfxcom:
+    container_name: dknr_rfxcom
+    image: jcpd/dknr-rfxcom:latest
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+    environment:
+      TZ: Europe/Paris
+      DKNR_USERNAME: ${DKNR_USERNAME}
+      DKNR_PASSWORD: ${DKNR_PASSWORD}
+      DKNR_SECRET: ${DKNR_SECRET}
+    ports:
+      - 1880:1880
+    volumes:
+      - dknr_rfxcom:/data
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/1880' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s 
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+volumes:
+  dknr_rfxcom:
