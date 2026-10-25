@@ -216,124 +216,6 @@
         "h": 82
     },
     {
-        "id": "ccd67f9d10cf80ef",
-        "type": "group",
-        "z": "48135a54600713e8",
-        "name": "custom - add",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "5bc8025f927ac169",
-            "ad0e3169b58b79be",
-            "6fee4d827a53c597",
-            "e15a1f4c9b2ebe8f",
-            "efbab03f220791d4",
-            "c40764e8810c9f39",
-            "2769376ef77c3075",
-            "f1c9618a72c03031",
-            "91ae6c95317eaa91",
-            "9d2379c6342d348f",
-            "f883c7f40dd54b6e"
-        ],
-        "x": 104,
-        "y": 639,
-        "w": 1502,
-        "h": 142
-    },
-    {
-        "id": "242271e7e57a5c2e",
-        "type": "group",
-        "z": "48135a54600713e8",
-        "name": "custom - port",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "3318e4c3011e5dad",
-            "239ff5808f6dd8de",
-            "34f609c8b3c6e9ab",
-            "96ea56ad793ff2be",
-            "0fcb199df8ea7a6b",
-            "4d90b065c71c0bf8",
-            "d0d5971c69e4c2fe",
-            "5f68e24e94521e59"
-        ],
-        "x": 104,
-        "y": 279,
-        "w": 872,
-        "h": 142
-    },
-    {
-        "id": "de3b449be3696b9f",
-        "type": "group",
-        "z": "48135a54600713e8",
-        "name": "custom - detail",
-        "style": {
-            "fill": "#6f2fa0",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "72566a2e8f8e0fcc",
-            "9838a27cf370aab3",
-            "6adbf4edd2050690",
-            "f1716f9a1110221a",
-            "64226070ffae0dab",
-            "d47f0440253a4247",
-            "5fe77efb8a1e0b2c",
-            "e05cf5155f9dcfd0",
-            "90816590c50872db",
-            "f8f807e0a0d4bc70",
-            "0a5ecfcf8fa10f73",
-            "2369bf87ea59c9ea",
-            "4ca0413e3f52e84b",
-            "080e692d5f55025c",
-            "e20da82ff41a4cb7",
-            "f7066787d032e148",
-            "2ef4f61af4b63a69",
-            "556dafc93864e8d5",
-            "9eb2846e8e0aa41e",
-            "29898a3cf89e3330",
-            "916b5d5f03431453",
-            "fbee8c613f1bfc56"
-        ],
-        "x": 104,
-        "y": 819,
-        "w": 1902,
-        "h": 502
-    },
-    {
-        "id": "08ad6b703c5edbf9",
-        "type": "group",
-        "z": "48135a54600713e8",
-        "name": "custom - 3CT port",
-        "style": {
-            "fill": "#ff0000",
-            "fill-opacity": "0.05",
-            "label": true
-        },
-        "nodes": [
-            "d59c33b5aceec492",
-            "d4e56daf2ac22ca2",
-            "069f5cfbd1485203",
-            "acbfd57e17e48d6a",
-            "a505446b5f8dc08d",
-            "73e16b1aeef7ef2d",
-            "6c99120456da8986",
-            "6207726612729257",
-            "9301624a5887cd8e"
-        ],
-        "x": 104,
-        "y": 459,
-        "w": 1302,
-        "h": 142
-    },
-    {
         "id": "c2a4c908aa1cf2e9",
         "type": "group",
         "z": "48135a54600713e8",
@@ -352,7 +234,7 @@
             "2c36ae0379904be7"
         ],
         "x": 104,
-        "y": 1359,
+        "y": 399,
         "w": 542,
         "h": 142
     },
@@ -370,8 +252,8 @@
             "025916ad75d760ec",
             "ba456fafe595af98"
         ],
-        "x": 614,
-        "y": 159,
+        "x": 94,
+        "y": 279,
         "w": 332,
         "h": 82
     },
@@ -456,7 +338,7 @@
         "name": "MQTT",
         "broker": "192.168.0.11",
         "port": "1883",
-        "clientid": "dkzendure",
+        "clientid": "dkrfxcom",
         "autoConnect": true,
         "usetls": false,
         "protocolVersion": 4,
@@ -532,42 +414,6 @@
         "disabled": false
     },
     {
-        "id": "b3a4a63fc14f6988",
-        "type": "ui-page",
-        "name": "add",
-        "ui": "df7710b4b2c4e55b",
-        "path": "/add",
-        "icon": "plus-thick",
-        "layout": "notebook",
-        "theme": "877e716e64a22cf1",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 2,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "4c116fe2697e0aa9",
         "type": "ui-group",
         "name": "Configurer MQTT",
@@ -580,82 +426,6 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "878b175954cece85",
-        "type": "ui-group",
-        "name": "Ajouter un appareil",
-        "page": "b3a4a63fc14f6988",
-        "width": "3",
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "475070dd9dc6f68a",
-        "type": "mqtt-broker",
-        "name": "zendure",
-        "broker": "mqtt-eu.zen-iot.com",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "2a08c2feb570ff96",
-        "type": "mqtt-broker",
-        "name": "zendure3ct",
-        "broker": "192.168.0.11",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
     },
     {
         "id": "bfacf54839b28751",
@@ -881,6 +651,13 @@
                 "rows": null
             },
             {
+                "label": "RFXCom2MQTT topic",
+                "key": "source",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
                 "label": "Utilisateur",
                 "key": "username",
                 "type": "text",
@@ -891,13 +668,6 @@
                 "label": "Mot de passe",
                 "key": "password",
                 "type": "password",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Old topic",
-                "key": "old_topic",
-                "type": "text",
                 "required": false,
                 "rows": null
             },
@@ -914,25 +684,17 @@
                 "type": "checkbox",
                 "required": false,
                 "rows": null
-            },
-            {
-                "label": "Données Smart Meter 3CT sur ce serveur MQTT",
-                "key": "zendure3ct",
-                "type": "checkbox",
-                "required": false,
-                "rows": null
             }
         ],
         "formValue": {
             "host": "",
             "port": "",
             "topic": "",
+            "source": "",
             "username": "",
             "password": "",
-            "old_topic": "",
             "homeassistant": "",
-            "enabled": false,
-            "zendure3ct": false
+            "enabled": false
         },
         "payload": "",
         "submit": "Enregistrer",
@@ -1166,7 +928,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "06491d8d5f7b9f7c",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', { }, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description || '',\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || ''\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'enabled': false,\n    'zendure3ct': false,\n    'homeassistant': 'homeassistant',\n    'old_topic': ''\n};\n\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', { }, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description || '',\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || ''\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'source': 'rfxcom2mqtt',\n    'enabled': false,\n    'homeassistant': 'homeassistant'\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1598,7 +1360,7 @@
         "z": "48135a54600713e8",
         "g": "8f8487859d9ae01f",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-zendure';\n\nmsg.payload.hmi = {\n    'detail': 'Piloter',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\n// courec entry: [name, entry, group, type, unit, default value, options: {key, name}, ha type, ha device_class, ha state_class]\n\nmsg.payload.inverter = {\n    // For now, we only take Hyper 2000 data.\n    'sn': ['Numéro de série', 'id', 'sensor', 'text', '', { }, 'text', '', ''],\n    'electricLevel': ['Niveau de charge', 'batteryLevel', 'sensor', 'number', '%', 0, {}, 'sensor', 'measurement', 'battery'],\n    'remainOutTime': ['Temps de décharge restant', 'lowLevelTime', 'sensor', 'number', 's', 0, {}, 'sensor', 'measurement', 'duration'],\n    'remainInputTime': ['Temps de recharge restant', 'highLevelTime', 'sensor', 'number', 's', 0, {}, 'sensor', 'measurement', 'duration'],\n    'socSet': ['Limite de puissance de charge', 'maxInputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'inputLimit': ['Limite en entrée', 'maxInputPower2', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'], //?\n    'outputLimit': ['Limite en sortie', 'maxOutputPower2', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'inverseMaxPower': [\"Limite d'injection réseau\", 'maxOutputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'solarInputPower': ['Production solaire totale', 'solarPowerTotal', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'packInputPower': ['Puissance en entrée', 'deviceInputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'outputPackPower': ['Puissance en sortie', 'deviceOutputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'outputHomePower': ['Puissance vers la grille', 'homeOuputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'packNum': ['Nombre de batteries', 'batteryNumber', 'sensor', 'number', '', 0, {}, '', '', ''],\n    'packState': ['Etat de fonctionnement', 'deviceState', 'sensor', 'enum', '', '0', { '0': 'standby', '1': 'input', '2': 'output' }, 'binary_sensor', 'measurement', 'enum'], // 0:standby 1:input 2:output\n    'buzzerSwitch': ['Buzzer switch', 'buzzerSwitch', 'sensor', 'binary', '', 0, {}, 'binary_sensor', 'measurement', 'none'],\n    'masterSwitch': ['Master switch', 'masterSwitch', 'sensor', 'binary', '', 0, {}, 'binary_sensor', 'measurement', 'none'],\n    'solarPower1': ['Production solaire 1', 'solarPower1', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'solarPower2': ['Production solaire 2', 'solarPower2', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'passMode': ['Bypass Mode', 'bypassmode', 'sensor', 'enum', '', '0', { '0': 'auto', '1': 'always off', '2': 'always on' }, 'sensor', 'measurement', 'none'], // 0：auto 1:always off 2:always on\n    'autoRecover': ['Automatic recovery of bypass mode settings', 'bypassRecovery', 'sensor', 'enum', '', '0', { '0': 'off', '1': 'on' }, 'binary_sensor', 'measurement', 'none'], // 0:off 1:on\n    //'packData': {}, // @see battery\n\n    'hyperTmp': ['Température', 'deviceTemperature', 'sensor', 'number', '°C', 0, {}, 'sensor', 'measurement', 'temperature'], // in x10 Kelvin\n    //'acMode': [-1, 'enum', 'AC mode', 'acMode'],\n    'wifiState': ['WiFi state', 'wifiState', 'sensor', 'enum', '', '0', { '0': 'disconnect', '1': 'connected' }, 'binary_sensor', 'measurement', 'connectivity'],\n    //'heatState': -1,\n    //'hubState': -1,\n\n    'gridInputPower': ['Grid input power', 'gridInputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'acOutputPower': ['AC output power', 'acOutputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n    'dcOutputPower': ['DC output power', 'dcOutputPower', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'], // model ACE 1500\n    'acSwitch': ['AC switch', 'acSwitch', 'sensor', 'enum', '', '0', { '0': 'off', '1': 'on' }, 'binary_sensor', 'measurement', 'none'],\n    'dcSwitch': ['DC switch', 'dcSwitch', 'sensor', 'enum', '', '0', { '0': 'off', '1': 'on' }, 'binary_sensor', 'measurement', 'none'], //model ACE 1500\n};\n\n// This is the packData[x] data where x is the current battery pack\nmsg.payload.battery = {\n    'sn': ['Numéro de série', 'id', 'sensor', 'text', '', {}, 'text', '', ''],\n    'inverter': ['Parent inverter', 'inverter', 'sensor', 'text', '', {}, 'text', '', ''],\n    'maxVol': ['Voltage maximum', 'maxVoltage', 'sensor', 'number', 'mV', 0, {}, 'sensor', 'measurement', 'voltage'], // 'value * 10', unit: mV, converted on the fly\n    'minVol': ['Voltage minimum', 'minVoltage', 'sensor', 'number', 'mV', 0, {}, 'sensor', 'measurement', 'voltage'], // 'value * 10', unit: mV, converted on the fly\n    'totalVol': ['Total voltage of the battery', 'totalVoltage', 'sensor', 'number', 'mV', 0, {}, 'sensor', 'measurement', 'voltage'], // 'value * 10', unit: mV, converted on the fly\n    'maxTemp': ['Température maximum', 'maxTemperature', 'sensor', 'number', '°C', 0, {}, 'sensor', 'measurement', 'temperature'], //current highest temperature value among all battery cells, unit: Kelvin => Celsius\n    'socLevel': ['Niveau de charge', 'batteryLevel', 'sensor', 'number', '%', 0, {}, 'sensor', 'measurement', 'battery'],\n    //'hubState': -1,\n}\n\nmsg.payload.zendure3ct = {\n    'L1_freq': ['Fréquence 1', 'L1Frequency', 'sensor', 'number', 'Hz', 0, {}, 'sensor', 'measurement', 'frequency'],\n    'L1_u': ['Voltage 1', 'L1Voltage', 'sensor', 'number', 'V', 0, {}, 'sensor', 'measurement', 'voltage'],\n    'L1_i': ['Intensité 1', 'L1Current', 'sensor', 'number', 'A', 0, {}, 'sensor', 'measurement', 'current'],\n    'L1_p': ['Puissance 1', 'L1Power', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n\n    'L2_freq': ['Fréquence 2', 'L2Frequency', 'sensor', 'number', 'Hz', 0, {}, 'sensor', 'measurement', 'frequency'],\n    'L2_u': ['Voltage 2', 'L2Voltage', 'sensor', 'number', 'V', 0, {}, 'sensor', 'measurement', 'voltage'],\n    'L2_i': ['Intensité 2', 'L2Current', 'sensor', 'number', 'A', 0, {}, 'sensor', 'measurement', 'current'],\n    'L2_p': ['Puissance 2', 'L2Power', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power'],\n\n    'L3_freq': ['Fréquence 3', 'L3Frequency', 'sensor', 'number', 'Hz', 0, {}, 'sensor', 'measurement', 'frequency'],\n    'L3_u': ['Voltage 3', 'L3Voltage', 'sensor', 'number', 'V', 0, {}, 'sensor', 'measurement', 'voltage'],\n    'L3_i': ['Intensité 3', 'L3Current', 'sensor', 'number', 'A', 0, {}, 'sensor', 'measurement', 'current'],\n    'L3_p': ['Puissance 3', 'L3Power', 'sensor', 'number', 'W', 0, {}, 'sensor', 'measurement', 'power']\n}\n\nmsg.payload.enum = {\n    'packState': {\n        '-1': '',\n        '0': 'En veille',\n        '1': 'En charge',\n        '2': 'En décharge'\n    },\n    'passMode': {\n        '-1': '',\n        '0': 'Auto',\n        '1': 'Always off',\n        '2': 'Always on'\n    },\n    'autoRecover': {\n        '-1': '',\n        '0': 'Off',\n        '1': 'On'\n    },\n    'acMode': {\n        '-1': '',\n        '0': 'Aucun',\n        '1': 'Calendrier',\n        '2': 'Intelligent',\n        '3': 'Tarif'\n    }\n};\n\nmsg.payload.label = {\n    'pow': 'Etat',\n    'mode': 'Mode',\n};\nmsg.payload.unit =  {\n    'pow': '',\n    'mode': '',\n};\nmsg.payload.pow =  {\n    '1': '1',\n    '0': '0'\n};\nmsg.payload.mode = {\n    '0': '0',\n    '1': '1',\n};\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'stop',\n        '1': 'play'\n    }\n}, 'memoryOnly');\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-rfxcom';\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1676,1316 +1438,9 @@
         "type": "comment",
         "z": "48135a54600713e8",
         "name": "Sources",
-        "info": "https://github.com/worgon12/Hyper-2000",
+        "info": "https://github.com/rxfcom2mqtt",
         "x": 660,
         "y": 80,
-        "wires": []
-    },
-    {
-        "id": "5bc8025f927ac169",
-        "type": "link in",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "custom - add",
-        "links": [
-            "3b90c3d9bd17f19b",
-            "6fee4d827a53c597",
-            "9dad50003e57f1fc"
-        ],
-        "x": 145,
-        "y": 680,
-        "wires": [
-            [
-                "e15a1f4c9b2ebe8f"
-            ]
-        ]
-    },
-    {
-        "id": "ad0e3169b58b79be",
-        "type": "ui-form",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "add - form",
-        "group": "878b175954cece85",
-        "label": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Adresse mail de l'utilisateur Zendure",
-                "key": "mail",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Numero de serie de l'onduleur Zendure",
-                "key": "sn",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "mail": "",
-            "sn": ""
-        },
-        "payload": "",
-        "submit": "Ajouter",
-        "cancel": "",
-        "resetOnSubmit": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "passthru": false,
-        "dropdownOptions": [],
-        "x": 450,
-        "y": 680,
-        "wires": [
-            [
-                "efbab03f220791d4"
-            ]
-        ]
-    },
-    {
-        "id": "6fee4d827a53c597",
-        "type": "link out",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "custom - add",
-        "mode": "link",
-        "links": [
-            "5bc8025f927ac169",
-            "afb87f35140e1869",
-            "0fcb199df8ea7a6b"
-        ],
-        "x": 1435,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "e15a1f4c9b2ebe8f",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "data",
-        "func": "// Prepare UI form\n\nmsg.class = '';\nmsg.enabled = true;\nmsg.topic = '';\nmsg.payload = {\n    'mail': '',\n    'sn': ''\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 680,
-        "wires": [
-            [
-                "ad0e3169b58b79be"
-            ]
-        ]
-    },
-    {
-        "id": "efbab03f220791d4",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "data",
-        "func": "// Check UI form and prepare Zendure Cloud API query\n\nif (msg.payload.mail !== '' && msg.payload.sn !== '') {\n    msg.topic = '';\n    msg.url = 'https://app.zendure.tech/eu/developer/api/apply';\n    msg.payload = {\"snNumber\":msg.payload.sn,\"account\":msg.payload.mail};\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 680,
-        "wires": [
-            [
-                "f1c9618a72c03031"
-            ]
-        ]
-    },
-    {
-        "id": "c40764e8810c9f39",
-        "type": "debug",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "custom - add",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1490,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "f1c9618a72c03031",
-        "type": "http request",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 810,
-        "y": 680,
-        "wires": [
-            [
-                "91ae6c95317eaa91"
-            ]
-        ]
-    },
-    {
-        "id": "9d2379c6342d348f",
-        "type": "json",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 1150,
-        "y": 680,
-        "wires": [
-            [
-                "f883c7f40dd54b6e"
-            ]
-        ]
-    },
-    {
-        "id": "3318e4c3011e5dad",
-        "type": "mqtt in",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "",
-        "topic": "",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "475070dd9dc6f68a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 430,
-        "y": 320,
-        "wires": [
-            [
-                "34f609c8b3c6e9ab"
-            ]
-        ]
-    },
-    {
-        "id": "239ff5808f6dd8de",
-        "type": "debug",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "custom - port",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "34f609c8b3c6e9ab",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "data",
-        "func": "// Parse MQTT message and store it in memory\n\n// Check that payload is well formed\nif (typeof msg.payload.sn !== 'string') {\n\n    return;\n}\n\n// Get inverter data description\nconst inverter_describe = { ...(global.get('describe.inverter', 'memoryOnly') || {}) };\n\n// Get inverter data default values\nlet inverter_template = { };\nfor (const key in inverter_describe) {\n    inverter_template[key] = inverter_describe[key][0];\n}\n\n// Get inverter data\nconst inverter_data = { ...(global.get('inverter', 'memoryOnly') || {}) };\n\n// Get inverter serial number\nconst sn = msg.payload.sn;\nif (typeof inverter_data[sn] !== 'object') {\n    inverter_data[sn] = {};\n}\n\n// Fill inverter data with all know keys\ninverter_data[sn] = { ...inverter_template, ...inverter_data[sn] };\n\n// Get battery data description\nconst battery_describe = { ...(global.get('describe.battery', 'memoryOnly') || {}) };\n\n// Get battery data default values\nlet battery_template = { };\nfor (const key in battery_describe) {\n    battery_template[key] = battery_describe[key][0];\n}\n\n// Get battery data\nconst battery_data = { ...(global.get('battery', 'memoryOnly') || {}) };\n\n// Parse Zendure MQTT message\nfor (const key in msg.payload) {\n\n    // battery data is in sub object\n    if (key == 'packData') {\n\n        // Parse inverter batteries data\n        for (let i = 0; i < msg.payload[key].length; i++) {\n\n            // Check data is well formed\n            if (typeof msg.payload[key][i]['sn'] !== 'string') {\n\n                continue;\n            }\n\n            // Shortcut\n            let battery_sn = msg.payload[key][i]['sn'];\n\n            // Create battery data if new\n            if (typeof battery_data[battery_sn] !== 'object') {\n                battery_data[battery_sn] = {};\n            }\n\n            // Parse battery data\n            for (const b_key in msg.payload[key][i]) {\n\n                // Convert in mV\n                if (['maxVol', 'minVol', 'totalVol'].includes(b_key)) {\n                    msg.payload[key][i][b_key] = msg.payload[key][i][b_key] * 10;\n                }\n\n                // Convert Kelvin in Celsuis\n                if (b_key === 'maxTemp') {\n                    msg.payload[key][i][b_key] = Math.round(msg.payload[key][i][b_key] * 10 - 2731) / 10;\n                }\n            }\n\n            // Fill battery data with all know keys, and complte with received data\n            battery_data[battery_sn] = { ...battery_template, ...battery_data[battery_sn], ...msg.payload[key][i], ...{ 'inverter': sn } };\n        }\n    }\n    else {\n        // Convert 10x Kelvin in °C\n        if (key === 'hyperTmp') {\n            msg.payload[key] = Math.round(msg.payload[key] - 2731) / 10;\n        }\n        if (typeof msg.payload[key] === 'boolean') {\n            msg.payload[key] = msg.payload[key] === true ? 1 : 0;\n        }\n\n        // Fill inverter data with received data\n        inverter_data[sn][key] = msg.payload[key];\n    }\n}\n\n// Save data in memory file\nglobal.set('inverter', inverter_data, 'memoryOnly');\nglobal.set('battery', battery_data, 'memoryOnly');\n\n// debug\nmsg.payload = {\n    'inverter': inverter_data,\n    'battery': battery_data\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 590,
-        "y": 320,
-        "wires": [
-            [
-                "239ff5808f6dd8de",
-                "d0d5971c69e4c2fe"
-            ]
-        ]
-    },
-    {
-        "id": "91ae6c95317eaa91",
-        "type": "switch",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "status",
-        "property": "statusCode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 990,
-        "y": 680,
-        "wires": [
-            [
-                "9d2379c6342d348f"
-            ],
-            [
-                "2769376ef77c3075"
-            ]
-        ]
-    },
-    {
-        "id": "f883c7f40dd54b6e",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "data",
-        "func": "if (typeof msg.payload !== 'object'\n   || typeof msg.payload.code !== 'number'\n   || msg.payload.number !== 200\n   || typeof msg.payload.data !== 'object'\n   || typeof msg.payload.data.appKey !== 'string'\n   || typeof msg.payload.data.secret !== 'string'\n   || typeof msg.payload.data.mqttUrl !== 'string'\n   || typeof msg.payload.data.port !== 'number'\n) {\n      msg.payload = \"Compte Zendure invalide\";\n}\nelse {\n   global.set('account', msg.payload.data, 'default');\n\n   msg.payload = \"Compte zendure valide\";\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1310,
-        "y": 680,
-        "wires": [
-            [
-                "c40764e8810c9f39",
-                "6fee4d827a53c597"
-            ]
-        ]
-    },
-    {
-        "id": "96ea56ad793ff2be",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "check",
-        "func": "const account = { ...(global.get('account', 'default') || {}) };\nif (typeof account.appKey !== 'string' || account.appKey === '') {\n    node.status({ 'fill': 'red', 'text': 'settings nok' });\n    \n    return;\n}\n\nmsg.topic = account.appKey + '/+/state';\nmsg.payload = '';\nmsg.broker = {};\nmsg.broker.broker = account.mqttUrl;\nmsg.broker.port = account.port;\nmsg.broker.username = account.appKey;\nmsg.broker.password = account.secret;\n\nmsg.broker.force = true;\nmsg.action = 'connect';\n\nnode.send([msg]);\n\ndelete msg.broker;\n\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\nmsg.topic = account.appKey + '/+/state';\nmsg.payload = '';\nmsg.action = 'subscribe';\nmsg.qos = 1;\n\nnode.send([msg]);\n\nnode.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 320,
-        "wires": [
-            [
-                "3318e4c3011e5dad"
-            ]
-        ]
-    },
-    {
-        "id": "0fcb199df8ea7a6b",
-        "type": "link in",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "custom - port",
-        "links": [
-            "3b90c3d9bd17f19b",
-            "6fee4d827a53c597"
-        ],
-        "x": 145,
-        "y": 320,
-        "wires": [
-            [
-                "96ea56ad793ff2be"
-            ]
-        ]
-    },
-    {
-        "id": "2769376ef77c3075",
-        "type": "debug",
-        "z": "48135a54600713e8",
-        "g": "ccd67f9d10cf80ef",
-        "name": "custom - add - error",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "72566a2e8f8e0fcc",
-        "type": "link in",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "custom - detail",
-        "links": [
-            "3b90c3d9bd17f19b",
-            "9dad50003e57f1fc"
-        ],
-        "x": 145,
-        "y": 1280,
-        "wires": [
-            [
-                "9838a27cf370aab3",
-                "f8f807e0a0d4bc70"
-            ]
-        ]
-    },
-    {
-        "id": "9838a27cf370aab3",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "data",
-        "func": "// Prepare UI page data\nflow.set('current_inverter', '', 'memoryOnly');\nflow.set('current_battery', '', 'memoryOnly');\n\n// Get known inverters\nconst inverters = { ...(global.get('inverter', 'memoryOnly') || { }) };\n\n// Prepare message\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label': '',\n    'value': '',\n    'dropdown': 'name'\n}];\n\nlet i = 1;\nfor(const sn in inverters) {\n    msg.options[i++] = {\n        'label': sn,\n        'value': sn,\n        'dropdown': 'name'\n    }\n}\n\n// If there are no inverters\nif (i == 1) {\n\n    node.send([null, null]);\n}\n// If there is only one inverter\nelse if (i == 2) {\n    msg.payload = msg.options[1]['value'];\n    node.send([msg, null]);\n    msg.class = 'remove';\n    msg.enlabed = false;\n\n    node.send([null, msg]);\n}\n// If there are more than one inverter\nelse {\n\n    node.send([null, msg]);\n}\n\nreturn;",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 1160,
-        "wires": [
-            [
-                "64226070ffae0dab"
-            ],
-            [
-                "6adbf4edd2050690"
-            ]
-        ]
-    },
-    {
-        "id": "6adbf4edd2050690",
-        "type": "ui-dropdown",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - select",
-        "label": "Sélectionner un onduleur",
-        "tooltip": "",
-        "order": 1,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": true,
-        "msgTrigger": "onChange",
-        "x": 480,
-        "y": 1220,
-        "wires": [
-            [
-                "f1716f9a1110221a"
-            ]
-        ]
-    },
-    {
-        "id": "f1716f9a1110221a",
-        "type": "switch",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "empty",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 670,
-        "y": 1220,
-        "wires": [
-            [
-                "64226070ffae0dab"
-            ],
-            [
-                "f8f807e0a0d4bc70"
-            ]
-        ]
-    },
-    {
-        "id": "64226070ffae0dab",
-        "type": "switch",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "exists",
-        "property": "#:(memoryOnly)::inverter",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "hask",
-                "v": "payload",
-                "vt": "msg"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 830,
-        "y": 1160,
-        "wires": [
-            [
-                "e05cf5155f9dcfd0",
-                "90816590c50872db"
-            ],
-            [
-                "f8f807e0a0d4bc70"
-            ]
-        ]
-    },
-    {
-        "id": "d47f0440253a4247",
-        "type": "change",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "set",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "#:(memoryOnly)::current_inverter",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 330,
-        "y": 1100,
-        "wires": [
-            [
-                "916b5d5f03431453"
-            ]
-        ]
-    },
-    {
-        "id": "5fe77efb8a1e0b2c",
-        "type": "switch",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "check",
-        "property": "#:(memoryOnly)::current_inverter",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "payload",
-                "vt": "msg"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 810,
-        "y": 1100,
-        "wires": [
-            [
-                "e05cf5155f9dcfd0"
-            ]
-        ]
-    },
-    {
-        "id": "e05cf5155f9dcfd0",
-        "type": "change",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "global",
-        "rules": [
-            {
-                "t": "set",
-                "p": "#:(memoryOnly)::current_inverter",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "#:(memoryOnly)::current_battery",
-                "pt": "flow",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "#:(memoryOnly)::inverter[msg.payload]",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 1100,
-        "wires": [
-            [
-                "d47f0440253a4247",
-                "0a5ecfcf8fa10f73",
-                "4ca0413e3f52e84b",
-                "e20da82ff41a4cb7",
-                "2ef4f61af4b63a69"
-            ]
-        ]
-    },
-    {
-        "id": "90816590c50872db",
-        "type": "change",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "show",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 1160,
-        "wires": [
-            [
-                "2369bf87ea59c9ea",
-                "080e692d5f55025c",
-                "556dafc93864e8d5"
-            ]
-        ]
-    },
-    {
-        "id": "f8f807e0a0d4bc70",
-        "type": "change",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 1280,
-        "wires": [
-            [
-                "2369bf87ea59c9ea",
-                "080e692d5f55025c",
-                "29898a3cf89e3330",
-                "556dafc93864e8d5"
-            ]
-        ]
-    },
-    {
-        "id": "0a5ecfcf8fa10f73",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "data",
-        "func": "// Parse inverter data\n\nconst describe = { ...(global.get('describe.inverter', 'memoryOnly') || { }) };\nconst enums = { ...(global.get('describe.enum', 'memoryOnly') || { }) };\n\nlet i = 0;\nlet data = [];\n\nfor (const k in describe) {\n    if (k in msg.payload) {\n        let unit = describe[k][4];\n        let value = msg.payload[k];\n\n        if (unit === 'enum' && typeof enums[k] === 'object' && typeof enums[k][value.toString()] === 'string') {\n            value = enums[k][value.toString()];\n            unit = '';\n        }\n        else if (unit === 'b') {\n            value = value === 1 ? 'On' : 'Off';\n            unit = '';\n        }\n\n        data[i++] = {\n            'name': describe[k][0],\n            'value': value,\n            'unit': unit\n        };\n    }\n}\n\nmsg.payload = data;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 1040,
-        "wires": [
-            [
-                "2369bf87ea59c9ea"
-            ]
-        ]
-    },
-    {
-        "id": "2369bf87ea59c9ea",
-        "type": "ui-table",
-        "z": "48135a54600713e8",
-        "d": true,
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - table",
-        "label": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "click",
-        "columns": [
-            {
-                "title": "",
-                "key": "name",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "value",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "unit",
-                "keyType": "key",
-                "type": "text",
-                "width": "20px",
-                "align": "start"
-            }
-        ],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
-        "className": "",
-        "x": 1380,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4ca0413e3f52e84b",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "main",
-        "func": "// Table bout main device information\n\nconst describe = { ...(global.get('describe.inverter', 'memoryOnly') || {}) };\nconst enums = { ...(global.get('describe.enum', 'memoryOnly') || {}) };\n\nlet res = [];\nlet i = 0;\nlet exists = false;\nlet state = 0;\n\nif (typeof msg.payload['sn'] == 'string') {\n    res[i++] = {\n        'lbl': describe['sn'][0],\n        'val': msg.payload['sn']\n    };\n    exists = true;\n}\n\nif (typeof msg.payload['packNum'] == 'number') {\n    res[i++] = {\n        'lbl': describe['packNum'][0],\n        'val': msg.payload['packNum']\n    };\n    exists = true;\n}\n\nif (typeof msg.payload['packState'] == 'number') {\n    res[i++] = {\n        'lbl': describe['packState'][0],\n        'val': enums['packState'][msg.payload['packState']]\n    };\n    exists = true;\n    state = msg.payload['packState'];\n}\n\nif (typeof msg.payload['electricLevel'] === 'number') {\n    res[i++] = {\n        'lbl': describe['electricLevel'][0],\n        'val': msg.payload['electricLevel'] + ' ' + describe['electricLevel'][4]\n    };\n    exists = true;\n}\n\nif (state === 1) {\n    if (typeof msg.payload['remainInputTime'] == 'number' && msg.payload['remainInputTime'] !== 59940) {\n        res[i++] = {\n            'lbl': describe['remainInputTime'][0],\n            'val': msg.payload['remainInputTime'] + ' ' + describe['remainInputTime'][4]\n        };\n        exists = true;\n    }\n    if (typeof msg.payload['packInputPower'] == 'number') {\n        res[i++] = {\n            'lbl': describe['packInputPower'][0],\n            'val': msg.payload['packInputPower'] + ' ' + describe['packInputPower'][4]\n        };\n        exists = true;\n    }\n}\n\nif (state === 2) {\n    if (typeof msg.payload['remainOutTime'] == 'number' && msg.payload['remainOutTime'] !== 59940) {\n        res[i++] = {\n            'lbl': describe['remainOutTime'][0],\n            'val': msg.payload['remainOutTime'] + ' ' + describe['remainOutTime'][4]\n        };\n        exists = true;\n    }\n    if (typeof msg.payload['outputPackPower'] == 'number') {\n        res[i++] = {\n            'lbl': describe['outputPackPower'][0],\n            'val': msg.payload['outputPackPower'] + ' ' + describe['outputPackPower'][4]\n        };\n        exists = true;\n    }\n}\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 860,
-        "wires": [
-            [
-                "080e692d5f55025c"
-            ]
-        ]
-    },
-    {
-        "id": "080e692d5f55025c",
-        "type": "ui-table",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - main",
-        "label": "Appareil",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "none",
-        "columns": [
-            {
-                "title": "",
-                "key": "lbl",
-                "keyType": "key",
-                "type": "text",
-                "width": "40%",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "val",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "start"
-            }
-        ],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
-        "className": "",
-        "x": 1380,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e20da82ff41a4cb7",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "settings",
-        "func": "// Table about main device settings\n\nconst describe = { ...(global.get('describe.inverter', 'memoryOnly') || {}) };\nconst enums = { ...(global.get('describe.enum', 'memoryOnly') || {}) };\n\nlet res = [];\nlet i = 0;\nlet exists = false;\n\nif (typeof msg.payload['socSet'] == 'number') {\n    res[i++] = {\n        'lbl': describe['socSet'][0],\n        'val': msg.payload['socSet'] + ' ' + describe['socSet'][4]\n    };\n    exists = true;\n}\n\nif (typeof msg.payload['inputLimit'] == 'number') {\n    res[i++] = {\n        'lbl': describe['inputLimit'][0],\n        'val': msg.payload['inputLimit'] + ' ' + describe['inputLimit'][4]\n    };\n    exists = true;\n}\n\nif (typeof msg.payload['outputLimit'] == 'number') {\n    res[i++] = {\n        'lbl': describe['outputLimit'][0],\n        'val': msg.payload['outputLimit'] + ' ' + describe['outputLimit'][4]\n    };\n    exists = true;\n}\n\nif (typeof msg.payload['inverseMaxPower'] == 'number') {\n    res[i++] = {\n        'lbl': describe['inverseMaxPower'][0],\n        'val': msg.payload['inverseMaxPower'] + ' ' + describe['inverseMaxPower'][4]\n    };\n    exists = true;\n}\n\n\nif (exists === true) {\n    msg.payload = res;\n    msg.class = '';\n\n    return msg;\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1160,
-        "y": 920,
-        "wires": [
-            [
-                "f7066787d032e148"
-            ]
-        ]
-    },
-    {
-        "id": "f7066787d032e148",
-        "type": "ui-table",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - settings",
-        "label": "Paramètres",
-        "order": 3,
-        "width": "3",
-        "height": "1",
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "none",
-        "columns": [
-            {
-                "title": "",
-                "key": "lbl",
-                "keyType": "key",
-                "type": "text",
-                "width": "40%",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "val",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "start"
-            }
-        ],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
-        "className": "",
-        "x": 1390,
-        "y": 920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2ef4f61af4b63a69",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "battery",
-        "func": "flow.set('current_battery', '', 'memoryOnly');\n\nlet i_sn = msg.payload.sn || '-';\n\nconst batteries = { ...(global.get('battery', 'memoryOnly') || { }) };\nlet data = {};\nfor (const b_sn in batteries) {\n    if (batteries[b_sn]['inverter'] === i_sn) {\n        data[b_sn] = batteries[b_sn];\n    }\n}\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nfor(const sn in data) {\n    msg.options[i++] = {\n        'label': sn,\n        'value': sn,\n        'dropdown':'name'\n    }\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 1100,
-        "wires": [
-            [
-                "556dafc93864e8d5"
-            ]
-        ]
-    },
-    {
-        "id": "556dafc93864e8d5",
-        "type": "ui-dropdown",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - battery",
-        "label": "Sélectionner une batterie",
-        "tooltip": "",
-        "order": 5,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "multiple": false,
-        "chips": false,
-        "clearable": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "typeIsComboBox": false,
-        "msgTrigger": "onChange",
-        "x": 1390,
-        "y": 1100,
-        "wires": [
-            [
-                "9eb2846e8e0aa41e"
-            ]
-        ]
-    },
-    {
-        "id": "9eb2846e8e0aa41e",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "data",
-        "func": "if (msg.payload !== '') {\n\n    const batteries = { ...(global.get('battery', 'memoryOnly') || { }) };\n    if (typeof batteries[msg.payload] === 'object') {\n\n        const describe = { ...(global.get('describe.battery', 'memoryOnly') || {}) };\n        //const enums = { ...(global.get('describe.enum', 'memoryOnly') || {}) };\n        const data = batteries[msg.payload];\n\n        let res = [];\n        let i = 0;\n        let exists = false;\n\n        if (typeof data['sn'] == 'string') {\n            res[i++] = {\n                'lbl': describe['sn'][0],\n                'val': data['sn']\n            };\n            exists = true;\n        }\n\n        if (typeof data['socLevel'] == 'number') {\n            res[i++] = {\n                'lbl': describe['socLevel'][0],\n                'val': data['socLevel'] + ' ' + describe['socLevel'][4]\n            };\n            exists = true;\n        }\n\n        if (typeof data['minVol'] == 'number') {\n            res[i++] = {\n                'lbl': describe['minVol'][0],\n                'val': data['minVol'] + ' ' + describe['minVol'][4]\n            };\n            exists = true;\n        }\n\n        if (typeof data['maxVol'] == 'number') {\n            res[i++] = {\n                'lbl': describe['maxVol'][0],\n                'val': data['maxVol'] + ' ' + describe['maxVol'][4]\n            };\n            exists = true;\n        }\n\n        if (typeof data['maxTemp'] == 'number') {\n            res[i++] = {\n                'lbl': describe['maxTemp'][0],\n                'val': data['maxTemp'] + ' ' + describe['maxTemp'][4]\n            };\n            exists = true;\n        }\n\n        if (exists === true) {\n            msg.payload = res;\n            msg.class = '';\n            msg.enabled = true;\n\n            return msg;\n        }\n    }\n}\n\nmsg.class = 'remove';\nmsg.enabled = false;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1610,
-        "y": 1100,
-        "wires": [
-            [
-                "29898a3cf89e3330"
-            ]
-        ]
-    },
-    {
-        "id": "29898a3cf89e3330",
-        "type": "ui-table",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "group": "117d5289b94a0fc6",
-        "name": "detail - inverter - battery - table",
-        "label": "Etat de la batterie",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": false,
-        "showSearch": false,
-        "deselect": true,
-        "selectionType": "none",
-        "columns": [
-            {
-                "title": "",
-                "key": "lbl",
-                "keyType": "key",
-                "type": "text",
-                "width": "40%",
-                "align": "end"
-            },
-            {
-                "title": "",
-                "key": "val",
-                "keyType": "key",
-                "type": "text",
-                "width": "",
-                "align": "start"
-            }
-        ],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
-        "className": "",
-        "x": 1850,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "916b5d5f03431453",
-        "type": "delay",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "1/30s",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "30",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 1100,
-        "wires": [
-            [
-                "fbee8c613f1bfc56"
-            ]
-        ]
-    },
-    {
-        "id": "fbee8c613f1bfc56",
-        "type": "delay",
-        "z": "48135a54600713e8",
-        "g": "de3b449be3696b9f",
-        "name": "30s",
-        "pauseType": "delay",
-        "timeout": "30",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 650,
-        "y": 1100,
-        "wires": [
-            [
-                "5fe77efb8a1e0b2c"
-            ]
-        ]
-    },
-    {
-        "id": "4d90b065c71c0bf8",
-        "type": "link out",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "custom - port",
-        "mode": "link",
-        "links": [
-            "6bfb1868b6a98f04"
-        ],
-        "x": 935,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "d0d5971c69e4c2fe",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "data",
-        "func": "// Compute data for mqtt\n\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst source = 'zendure';\nconst inverter_template = { ...(global.get('describe.inverter', 'memoryOnly') || { }) };\nconst inverter_data = msg.payload.inverter;\n\nconst battery_template = { ...(global.get('describe.battery', 'memoryOnly') || {}) };\nconst battery_data = msg.payload.battery;\n\nfor (const sn in inverter_data) {\n    node.status({\"text\":sn});\n    msg.topic = global.get('mqtt.old_topic', 'default') + '/inverter/' + sn;\n    msg.payload = {};\n\n    for (const key in inverter_template) {\n        if (inverter_template[key][3] !== '' \n            && inverter_data[sn].hasOwnProperty(key)\n            && inverter_data[sn][key] !== -1 \n            && inverter_data[sn][key] !== ''\n        ) {\n            msg.payload[inverter_template[key][1]] = {\n                'unit': inverter_template[key][4],\n                'label': inverter_template[key][0],\n                'raw': inverter_data[sn][key].toString(),\n                'value': inverter_data[sn][key],\n                'full': inverter_data[sn][key].toString() + inverter_template[key][4]\n            };\n        }\n        // new version\n        if (flow.get('last[\"' + sn + '_' + inverter_template[key][1] + '\"]', 'memoryOnly') !== inverter_data[sn][key]) {\n            flow.set('last[\"' + sn + '_' + inverter_template[key][1] + '\"]', inverter_data[sn][key], 'memoryOnly');\n            let newMsg = {\n                'topic': [topic, 'get', source, sn, inverter_template[key][1]].join('/'),\n                'payload': inverter_data[sn][key]\n            };\n            node.send([newMsg]);\n        }\n    }\n\n    node.send([msg]);\n}\n\nfor (const sn in battery_data) {\n    msg.topic = global.get('mqtt.old_topic', 'default') + '/battery/' + sn;\n    msg.payload = {};\n\n    for (const key in battery_template) {\n        if (battery_template[key][3] !== '' \n            && battery_data[sn].hasOwnProperty(key)\n            && battery_data[sn][key] !== -1 \n            && battery_data[sn][key] !== ''\n        ) {\n            msg.payload[battery_template[key][1]] = {\n                'unit': battery_template[key][4],\n                'label': battery_template[key][0],\n                'raw': battery_data[sn][key].toString(),\n                'value': battery_data[sn][key],\n                'full': battery_data[sn][key].toString() + battery_template[key][4]\n            };\n        }\n        // new version\n        if (flow.get('last[\"' + sn + '_' + battery_template[key][1] + '\"]', 'memoryOnly') !== battery_data[sn][key]) {\n            flow.set('last[\"' + sn + '_' + battery_template[key][1] + '\"]', battery_data[sn][key], 'memoryOnly');\n            let newMsg = {\n                'topic': [topic, 'get', source, sn, battery_template[key][1]].join('/'),\n                'payload': battery_data[sn][key]\n            };\n\n            node.send([newMsg]);\n        }\n    }\n\n    node.send([msg]);\n\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 750,
-        "y": 320,
-        "wires": [
-            [
-                "4d90b065c71c0bf8"
-            ]
-        ]
-    },
-    {
-        "id": "d59c33b5aceec492",
-        "type": "link in",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "custom - 3CT port",
-        "links": [
-            "3b90c3d9bd17f19b"
-        ],
-        "x": 145,
-        "y": 500,
-        "wires": [
-            [
-                "d4e56daf2ac22ca2"
-            ]
-        ]
-    },
-    {
-        "id": "d4e56daf2ac22ca2",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "check",
-        "func": "const mqtt = { ...(global.get('mqtt', 'default') || { }) };\n\nif (typeof mqtt.zendure3ct !== 'boolean' || mqtt.zendure3ct === false) {\n    node.status({ 'fill': 'red', 'text': 'settings nok' });\n    \n    return;\n}\n\nmsg.topic = 'Zendure/sensor/#';\nmsg.broker = {};\n\nif (typeof mqtt === 'object' && mqtt.enabled === true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send([msg]);\n\n        delete msg.broker;\n\n        await new Promise(resolve => setTimeout(resolve, 1000));\n\n        msg.topic = 'Zendure/sensor/#';\n        msg.payload = '';\n        msg.action = 'subscribe';\n        msg.qos = 1;\n\n        node.send([msg]);\n    } else {\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 500,
-        "wires": [
-            [
-                "069f5cfbd1485203"
-            ]
-        ]
-    },
-    {
-        "id": "069f5cfbd1485203",
-        "type": "mqtt in",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "2a08c2feb570ff96",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 430,
-        "y": 500,
-        "wires": [
-            [
-                "73e16b1aeef7ef2d"
-            ]
-        ]
-    },
-    {
-        "id": "acbfd57e17e48d6a",
-        "type": "debug",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "custom - 3CT port",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1270,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "a505446b5f8dc08d",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "data",
-        "func": "const split = msg.topic.split('/');\nconst key = split.pop();\nconst sn = split.pop();\n\nnode.status({'text': sn });\n\nconst zendure3ct = { ...(global.get('zendure3ct', 'memoryOnly') || { }) };\n\nif (typeof zendure3ct[sn] !== 'object') {\n    zendure3ct[sn] = { };\n}\n\nzendure3ct[sn][key] = msg.payload;\n\nglobal.set('zendure3ct', zendure3ct, 'memoryOnly');\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 750,
-        "y": 500,
-        "wires": [
-            [
-                "6207726612729257"
-            ]
-        ]
-    },
-    {
-        "id": "73e16b1aeef7ef2d",
-        "type": "delay",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "20m/s",
-        "pauseType": "rate",
-        "timeout": "10",
-        "timeoutUnits": "milliseconds",
-        "rate": "20",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 590,
-        "y": 500,
-        "wires": [
-            [
-                "a505446b5f8dc08d"
-            ]
-        ]
-    },
-    {
-        "id": "6c99120456da8986",
-        "type": "function",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "data",
-        "func": "// Compute data for mqtt\n\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst source = 'zendure';\nconst meter = { ...(flow.get('meter', 'memoryOnly') || { }) };\nconst meter_template = { ...(global.get('describe.zendure3ct', 'memoryOnly') || {}) };\nconst meter_data = { ...(global.get('zendure3ct', 'memoryOnly') || {}) };\n\nfor (const sn in meter_data) {\n    node.status({\"text\": sn});\n    msg.topic = global.get('mqtt.old_topic', 'default') + '/meter/' + sn;\n    msg.payload = {};\n    let long = '';\n\n    msg.payload['id'] = {\n        'unit': '',\n        'label': 'Numéro de série',\n        'raw': sn,\n        'value': sn,\n        'full': sn\n    };\n\n    for (const key in meter_template) {\n        if (meter_template[key][1] !== '' \n            && meter_data[sn].hasOwnProperty(key)\n            && meter_data[sn][key] !== -1 \n            && meter_data[sn][key] !== ''\n        ) {\n            msg.payload[meter_template[key][1]] = {\n                'unit': meter_template[key][4],\n                'label': meter_template[key][0],\n                'raw': meter_data[sn][key].toString(),\n                'value': meter_data[sn][key],\n                'full': meter_data[sn][key].toString() + meter_template[key][4]\n            };\n\n            long += meter_data[sn][key].toString();\n        }\n\n        // new version\n        if (flow.get('last[\"' + sn + '_' + meter_template[key][1] + '\"]', 'memoryOnly') !== meter_data[sn][key]) {\n            flow.set('last[\"' + sn + '_' + meter_template[key][1] + '\"]', meter_data[sn][key], 'memoryOnly');\n            let newMsg = {\n                'topic': [topic, 'get', source, sn, meter_template[key][1]].join('/'),\n                'payload': meter_data[sn][key]\n            };\n\n            node.send([newMsg]);\n        }\n    }\n\n    if (long !== meter[sn]) {\n        meter[sn] = long;\n        flow.set('meter', meter, 'memoryOnly');\n\n        node.send([msg]);\n    }\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 500,
-        "wires": [
-            [
-                "acbfd57e17e48d6a",
-                "9301624a5887cd8e"
-            ]
-        ]
-    },
-    {
-        "id": "6207726612729257",
-        "type": "delay",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "1m/s",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 910,
-        "y": 500,
-        "wires": [
-            [
-                "6c99120456da8986"
-            ]
-        ]
-    },
-    {
-        "id": "9301624a5887cd8e",
-        "type": "link out",
-        "z": "48135a54600713e8",
-        "g": "08ad6b703c5edbf9",
-        "name": "custom - 3CT port",
-        "mode": "link",
-        "links": [
-            "6bfb1868b6a98f04"
-        ],
-        "x": 1195,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "5f68e24e94521e59",
-        "type": "comment",
-        "z": "48135a54600713e8",
-        "g": "242271e7e57a5c2e",
-        "name": "On docker restart, not all data are available. Just wait.",
-        "info": "",
-        "x": 420,
-        "y": 380,
         "wires": []
     },
     {
@@ -2998,7 +1453,7 @@
             "2b841cb3792eb18d"
         ],
         "x": 145,
-        "y": 1400,
+        "y": 440,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -3020,7 +1475,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 1460,
+        "y": 500,
         "wires": []
     },
     {
@@ -3046,7 +1501,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 290,
-        "y": 1460,
+        "y": 500,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -3064,7 +1519,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 585,
-        "y": 1400,
+        "y": 440,
         "wires": []
     },
     {
@@ -3086,7 +1541,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 470,
-        "y": 1400,
+        "y": 440,
         "wires": [
             [
                 "6326830faa9d7246"
@@ -3099,7 +1554,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'zendure';\nconst groups = {\n    'zendure3ct': '',\n    'battery': '',\n    'inverter': ''\n};\n\nfor (const group in groups) {\n    let data = global.get(group, 'memoryOnly') || { };\n    for (const id in data) {\n        for (const key in data[id]) {\n            // DKNR\n            if (Array.isArray(describe[group][key])) {\n                // topic as uid must be source _ id _ entry\n                let dknrMsg = {\n                    'topic': [topic, 'discovery', source, id, describe[group][key][1]].join('/'),\n                    'payload': {\n                        'name': describe[group][key][0],\n                        'group': describe[group][key][2],\n                        'type': describe[group][key][3],\n                        'unit': describe[group][key][4],\n                        'value': describe[group][key][5],\n                        'options': describe[group][key][6]\n                    },\n                    'qos': 0,\n                    'retain': true\n                };\n\n                node.send(dknrMsg);\n            }\n\n            // Home assistant\n            if (ha_topic !== '' && Array.isArray(describe[group][key]) && describe[group][key][7] !== '') {\n\n                let haMsg = {\n                    'topic': ha_topic + '/' + describe[group][key][7] + '/zendure/' + id + '_' + describe[group][key][1],\n                    'qos': 0,\n                    'retain': true,\n                    'payload': {\n                        'unique_id': ['dknr', source, id, describe[group][key][1]].join('_'),\n                        'name': describe[group][key][0],\n                        'state_topic': [topic, 'get', source, id, describe[group][key][1]].join('/'),\n                        'state_class': describe[group][key][8],\n                        'device_class': describe[group][key][9],\n                        'unit_of_measurement': describe[group][key][4],\n                        'device': {\n                            'identifiers': [\n                                'dknr_' + id\n                            ],\n                            'manufacturer': 'Zendure',\n                            'model': 'zendure_' + id,\n                            'name': 'Zendure ' + id\n                        }\n                    }\n                };\n\n                node.send(haMsg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'rfxcom';\n\n//...\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3107,7 +1562,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 1400,
+        "y": 440,
         "wires": [
             [
                 "ace85f776ce24777",
@@ -3137,8 +1592,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 710,
-        "y": 200,
+        "x": 190,
+        "y": 320,
         "wires": [
             [
                 "ba456fafe595af98"
@@ -3158,8 +1613,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 200,
+        "x": 350,
+        "y": 320,
         "wires": []
     }
 ]
