@@ -50,8 +50,8 @@
             "3123652da9c400b0",
             "dc49245b8826b77b",
             "3520fb7d87e153b8",
-            "bbea7d62dc166e0a",
-            "4f96afddd9e7e719"
+            "4f96afddd9e7e719",
+            "e9cb63ec88c7ad0a"
         ],
         "x": 94,
         "y": 39,
@@ -234,7 +234,7 @@
             "2c36ae0379904be7"
         ],
         "x": 104,
-        "y": 399,
+        "y": 579,
         "w": 542,
         "h": 142
     },
@@ -255,6 +255,74 @@
         "x": 94,
         "y": 279,
         "w": 332,
+        "h": 82
+    },
+    {
+        "id": "08e1b451f78dbc6f",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - mqtt - source",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "8af92d0298a6f80f",
+            "cd01ae81b8993637",
+            "6bb133ffb6cb4f84",
+            "ff417f98ca614605",
+            "9f469a49d95475f9",
+            "3634d5248dfe1368"
+        ],
+        "x": 104,
+        "y": 399,
+        "w": 842,
+        "h": 142
+    },
+    {
+        "id": "47b156f27ae882b2",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - disabled",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "3ba5fde99aa0111f",
+            "814a3301a1c8088a",
+            "e0be97bd8a7b15f7",
+            "6a7b21de73455c9f",
+            "3ed5c34617bab637",
+            "bc13aa847a05ed12",
+            "31d6dfdcf9e1f89a",
+            "a42d2f408c9c20fc"
+        ],
+        "x": 104,
+        "y": 759,
+        "w": 772,
+        "h": 142
+    },
+    {
+        "id": "213ea0b067ef32ca",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "custom - detail",
+        "style": {
+            "fill": "#6f2fa0",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "3dfcebbb8f4c6556",
+            "9545a5a82c6c5ed6",
+            "b8af6865a1bd655b"
+        ],
+        "x": 104,
+        "y": 939,
+        "w": 502,
         "h": 82
     },
     {
@@ -366,7 +434,7 @@
     {
         "id": "117d5289b94a0fc6",
         "type": "ui-group",
-        "name": "Détail d'un appareil",
+        "name": "Détail des appareils",
         "page": "f89655b525aee8cd",
         "width": "6",
         "height": 1,
@@ -375,7 +443,8 @@
         "className": "",
         "visible": "true",
         "disabled": "false",
-        "groupType": "default"
+        "groupType": "default",
+        "tab": ""
     },
     {
         "id": "887b3087f3dda2eb",
@@ -426,6 +495,104 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "df0a9a09acf159d3",
+        "type": "mqtt-broker",
+        "name": "source",
+        "broker": "192.0.1.111",
+        "port": 1883,
+        "clientid": "dknrrfxcomsource",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4847d0896f37c35f",
+        "type": "ui-page",
+        "name": "disabled",
+        "ui": "df7710b4b2c4e55b",
+        "path": "/disabled",
+        "icon": "concel",
+        "layout": "notebook",
+        "theme": "877e716e64a22cf1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "00f9dbab804c18a6",
+        "type": "ui-group",
+        "name": "Bloquer un appareil",
+        "page": "4847d0896f37c35f",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "7c71ff40d70aec71",
+        "type": "ui-group",
+        "name": "Appareils bloqués",
+        "page": "4847d0896f37c35f",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
     },
     {
         "id": "bfacf54839b28751",
@@ -488,7 +655,8 @@
         "links": [
             "4d90b065c71c0bf8",
             "9301624a5887cd8e",
-            "6326830faa9d7246"
+            "6326830faa9d7246",
+            "3634d5248dfe1368"
         ],
         "x": 125,
         "y": 500,
@@ -542,7 +710,7 @@
         "y": 80,
         "wires": [
             [
-                "bbea7d62dc166e0a"
+                "e9cb63ec88c7ad0a"
             ]
         ]
     },
@@ -560,7 +728,10 @@
             "5bc8025f927ac169",
             "0fcb199df8ea7a6b",
             "72566a2e8f8e0fcc",
-            "d59c33b5aceec492"
+            "d59c33b5aceec492",
+            "cd01ae81b8993637",
+            "e0be97bd8a7b15f7",
+            "b8af6865a1bd655b"
         ],
         "x": 1235,
         "y": 80,
@@ -814,7 +985,9 @@
         "links": [
             "e344ab0a1e1ea77b",
             "5bc8025f927ac169",
-            "72566a2e8f8e0fcc"
+            "72566a2e8f8e0fcc",
+            "e0be97bd8a7b15f7",
+            "b8af6865a1bd655b"
         ],
         "x": 1135,
         "y": 860,
@@ -928,7 +1101,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "06491d8d5f7b9f7c",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', { }, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description || '',\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || ''\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'source': 'rfxcom2mqtt',\n    'enabled': false,\n    'homeassistant': 'homeassistant'\n};\n\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', { }, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description.slice(5) || '',\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || ''\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'source': 'rfxcom2mqtt',\n    'enabled': false,\n    'homeassistant': 'homeassistant'\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1129,7 +1302,8 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    margin-top: -5px;\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
+        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    margin-top: -5px;\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
+        "noerr": 0,
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -1164,25 +1338,6 @@
         "wires": [
             [
                 "9dad50003e57f1fc"
-            ]
-        ]
-    },
-    {
-        "id": "bbea7d62dc166e0a",
-        "type": "link call",
-        "z": "4c2feff02c9aebaa",
-        "g": "06491d8d5f7b9f7c",
-        "name": "",
-        "links": [
-            "a0adaa6d8090b715"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "4f96afddd9e7e719"
             ]
         ]
     },
@@ -1328,6 +1483,25 @@
         ]
     },
     {
+        "id": "e9cb63ec88c7ad0a",
+        "type": "link call",
+        "z": "4c2feff02c9aebaa",
+        "g": "06491d8d5f7b9f7c",
+        "name": "",
+        "links": [
+            "a0adaa6d8090b715"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "4f96afddd9e7e719"
+            ]
+        ]
+    },
+    {
         "id": "a0adaa6d8090b715",
         "type": "link in",
         "z": "48135a54600713e8",
@@ -1360,7 +1534,7 @@
         "z": "48135a54600713e8",
         "g": "8f8487859d9ae01f",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-rfxcom';\n\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-rfxcom';\n\nmsg.payload.hmi = {\n    'detail': 'Voir',\n    'disabled': 'Bloquer',\n    'mqtt': 'Configurer'\n};\n\nglobal.set('disabled', [\n    ['subTypeValue', 'RM174RF']\n], 'default');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1419,7 +1593,8 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.detail\" @click=\"oe_nav('detail')\" :title=\"oe_titles.detail\" icon=\"mdi-eye\"></v-btn> \n            <v-btn v-if=\"oe_menus.add\" @click=\"oe_nav('add')\" :title=\"oe_titles.add\" icon=\"mdi-plus-thick\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { detail: true, add: true, mqtt: true },\n                oe_titles: { detail: '', add: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "format": "<template>\n    <Teleport v-if=\"mounted\" to=\"#oe_header\">\n        <v-toolbar class=\"oe_nav\"> \n        <v-btn-group variant=\"outlined\" divided>\n            <v-btn v-if=\"oe_menus.detail\" @click=\"oe_nav('detail')\" :title=\"oe_titles.detail\" icon=\"mdi-eye\"></v-btn> \n            <v-btn v-if=\"oe_menus.disabled\" @click=\"oe_nav('disabled')\" :title=\"oe_titles.disabled\" icon=\"mdi-cancel\"></v-btn> \n            <v-btn v-if=\"oe_menus.mqtt\" @click=\"oe_nav('mqtt')\" :title=\"oe_titles.mqtt\" icon=\"mdi-cog\"></v-btn> \n        </v-btn-group>\n        <v-toolbar-title :text=\"msg.title\"></v-toolbar-title>\n        <v-btn :href=\"msg.git\"><img height=\"32px\" src=\"/icon.png\" :title=\"msg.full\"></img></v-btn>\n        </v-toolbar>\n    </Teleport>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                oe_menus: { detail: true, add: true, mqtt: true },\n                oe_titles: { detail: '', add: '', mqtt: '' },\n                mounted: false\n            }\n        },\n        mounted() {\n            let div = document.createElement(\"div\");\n            div.id=\"oe_header\";\n            const el = document.body.querySelector(\"#app\").prepend(div);\n            this.mounted = true;\n        },\n        methods: {\n            oe_nav: function (page) {\n                this.send(page)\n            }\n        },\n        watch: {\n            msg: function (msg) {\n                document.documentElement.setAttribute(\"lang\", msg.lang);\n                document.documentElement.setAttribute(\"translate\", \"no\");\n                document.title = msg.title;\n                this.oe_menus = msg.menus;\n                this.oe_titles = msg.titles;\n            }\n        }\n    }\n\n</script>",
+        "noerr": 0,
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
@@ -1453,7 +1628,7 @@
             "2b841cb3792eb18d"
         ],
         "x": 145,
-        "y": 440,
+        "y": 620,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -1475,7 +1650,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 500,
+        "y": 680,
         "wires": []
     },
     {
@@ -1501,7 +1676,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 290,
-        "y": 500,
+        "y": 680,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -1519,7 +1694,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 585,
-        "y": 440,
+        "y": 620,
         "wires": []
     },
     {
@@ -1541,7 +1716,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 470,
-        "y": 440,
+        "y": 620,
         "wires": [
             [
                 "6326830faa9d7246"
@@ -1554,7 +1729,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'rfxcom';\n\n//...\n\nreturn;",
+        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'rfxcom';\n\n//...\nfor (const k in controls) {\n    // topic as uid must be source _ id _ entry\n    let dknrMsg = {\n        'topic': [topic, 'discovery', source, controls[k]['device'], controls[k]['entity']].join('/'),\n        'payload': {\n            'name': controls[k]['name'],\n            'group': controls[k]['group'],\n            'type': controls[k]['type'],\n            'unit': controls[k]['unit'],\n            'value': controls[k]['value'],\n            'options': {}\n        },\n        'qos': 0,\n        'retain': true\n    };\n\n    node.send(dknrMsg);\n\n    // ha\n    msg.topic = ha_topic + '/' + controls[k]['ha_type'] + '/rfxcom/' + controls[k]['device'] + '_' + controls[k]['entity'] + '/config';\n\n    if (controls[k]['ha_type'] === 'sensor') {\n        msg.payload = {\n            'unique_id': ['dknr', source, controls[k]['device'], controls[k]['entity']].join('_'),\n            'name': controls[k]['name'],\n            'state_topic': [topic, 'get', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'state_class': controls[k]['ha_state'],\n            'device_class': controls[k]['ha_device'],\n            'unit_of_measurement': controls[k]['unit'],\n            'device': {\n                'identifiers': [\n                    controls[k]['device']\n                ],\n                'manufacturer': 'RFXCom',\n                'model': 'rfxcom ' + controls[k]['device'],\n                'name': 'RFXCom ' + controls[k]['device']\n            }\n        };\n\n        node.send(msg);\n    }\n    else if (controls[k]['ha_type'] === 'switch') {\n        msg.payload = {\n            'unique_id': ['dknr', source, controls[k]['device'], controls[k]['entity']].join('_'),\n            'name': controls[k]['name'],\n            'payload_off': 0,\n            'payload_on': 1,\n            'state_off': 0,\n            'state_on': 1,\n            'command_topic': [topic, 'set', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'state_topic': [topic, 'get', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'device': {\n                'identifiers': [\n                    controls[k]['device']\n                ],\n                'manufacturer': 'RFXCom',\n                'model': 'rfxcom ' + controls[k]['device'],\n                'name': 'RFXCom ' + controls[k]['device']\n            }\n        };\n\n        node.send(msg);\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1562,7 +1737,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 440,
+        "y": 620,
         "wires": [
             [
                 "ace85f776ce24777",
@@ -1616,5 +1791,425 @@
         "x": 350,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "8af92d0298a6f80f",
+        "type": "mqtt in",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "df0a9a09acf159d3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "ff417f98ca614605"
+            ]
+        ]
+    },
+    {
+        "id": "cd01ae81b8993637",
+        "type": "link in",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "custom - mqtt - source",
+        "links": [
+            "3b90c3d9bd17f19b"
+        ],
+        "x": 145,
+        "y": 440,
+        "wires": [
+            [
+                "6bb133ffb6cb4f84"
+            ]
+        ]
+    },
+    {
+        "id": "6bb133ffb6cb4f84",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "data",
+        "func": "const mqtt = global.get('mqtt', 'default') || { };\nif (!mqtt.enabled || typeof mqtt.source !== 'string' || mqtt.source === '') {\n    node.status({ 'fill': 'red', 'text': 'settings nok' });\n    \n    return;\n}\n\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.broker = {};\nmsg.broker.broker = mqtt.host;\nmsg.broker.port = mqtt.port;\nmsg.broker.username = mqtt.username;\nmsg.broker.password = mqtt.password;\n\nmsg.broker.force = true;\nmsg.action = 'connect';\n\nnode.send([msg]);\n\ndelete msg.broker;\n\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.action = 'subscribe';\nmsg.qos = 1;\n\nnode.send([msg]);\n\nnode.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "8af92d0298a6f80f"
+            ]
+        ]
+    },
+    {
+        "id": "ff417f98ca614605",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "data",
+        "func": "// Remove this type\nconst disabled = global.get('disabled', 'default');\nfor (let i = 0; i< disabled.length; i++) {\n    if (Object.hasOwn(msg.payload, disabled[i][0]) && msg.payload[disabled[i][0]] === disabled[i][1]) {\n\n        return;\n    }\n}\n\nif (typeof global.get('controls', 'memoryOnly') !== 'object') {\n    global.set('controls', { }, 'memoryOnly');\n    await new Promise(resolve => setTimeout(resolve, 10));\n}\n\nconst topic = global.get('mqtt.topic');\nconst source = 'rfxcom';\n\nconst path = msg.topic.split('/');\nif (path.length < 2) {\n\n    return;\n}\n\nlet device = path.pop();\nif (device === 'devices') {\n\n    return;\n}\nlet sub = path.pop();\nif (sub !== 'devices') {\n    device = sub;//(sub + '-' + device).slice(2);\n}\ndevice = device.slice(2);\nlet value = '';\n\nlet controls = global.get('controls', 'memoryOnly');\n\nfor (let entity in msg.payload) {\n    let exists = true;\n    let control = {\n        'device': device,\n        'entity': entity,\n        'name': '',\n        'group': 'sensor',\n        'type': 'number',\n        'unit': '',\n        'value': 0,\n        'options': {},\n        'ha_type': 'sensor',\n        'ha_state': 'measurement',\n        'ha_device': 'none'\n    };\n\n    switch (entity) {\n        case 'batteryLevel':\n            value = msg.payload.batteryLevel * 10;\n\n            control.name = 'Batterie';\n            control.unit = '%';\n            control.ha_device = 'battery';\n            break;\n        case 'rssi':\n            value = msg.payload.rssi;\n\n            control.name = 'Signal';\n            control.unit = 'dBm';\n            control.ha_device = 'signal_strength';\n            break;\n        case 'command':\n            value = msg.payload[entity] == 'On' ? 1 : 0;\n            entity = 'command' + msg.payload.unitCode;\n\n            control.entity = entity;\n            control.name = 'Bouton ' + msg.payload.unitCode;\n            control.ha_type = 'switch';\n            break;\n        case 'humidity':\n            value = msg.payload.humidity;\n\n            control.name = 'Humidité';\n            control.unit = '%';\n            control.ha_device = 'humidity';\n            break;\n        case 'temperature':\n            value = msg.payload.temperature;\n\n            control.name = 'Température';\n            control.unit = '°C';\n            control.ha_device = 'temperature';\n            break;\n        default:\n            exists = false;\n    }\n    \n    if (exists) {\n        let uid = device + '_' + entity;\n\n        controls[uid] = { ...control };\n\n        if (flow.get('last[\"' + uid + '\"]', 'memoryOnly') !== value) {\n            flow.set('last[\"' + uid + '\"]', value, 'memoryOnly');\n\n            let dknr = {\n                'topic': [topic, 'get', source, device, entity].join('/'),\n                'payload': value,\n                'qos': 0,\n                'retain': false\n            };\n\n            node.send([dknr]);\n        }\n\n        await new Promise(resolve => setTimeout(resolve, 10));\n    }\n}\n\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "9f469a49d95475f9",
+                "3634d5248dfe1368"
+            ]
+        ]
+    },
+    {
+        "id": "9f469a49d95475f9",
+        "type": "debug",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "custom - mqtt - source",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3634d5248dfe1368",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "custom - mqtt - source",
+        "mode": "link",
+        "links": [
+            "6bfb1868b6a98f04"
+        ],
+        "x": 715,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3ba5fde99aa0111f",
+        "type": "ui-table",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "group": "7c71ff40d70aec71",
+        "name": "custom - disabled - table",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": false,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "Clé",
+                "key": "key",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "Valeur",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "20px",
+                "align": "start"
+            },
+            {
+                "title": "",
+                "key": "delete",
+                "keyType": "key",
+                "type": "button",
+                "width": "20px",
+                "align": "end"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 490,
+        "y": 800,
+        "wires": [
+            [
+                "a42d2f408c9c20fc"
+            ]
+        ]
+    },
+    {
+        "id": "814a3301a1c8088a",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "data",
+        "func": "const disabled = global.get('disabled', 'default') || { };\n\nmsg.payload = [];\n\nfor (let i = 0; i < disabled.length; i++) {\n    msg.payload.push({\n        'index': i,\n        'key': disabled[i][0],\n        'value': disabled[i][1],\n        'delete': 'Supprimer'\n    });\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 800,
+        "wires": [
+            [
+                "3ba5fde99aa0111f"
+            ]
+        ]
+    },
+    {
+        "id": "e0be97bd8a7b15f7",
+        "type": "link in",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "custom - disabled",
+        "links": [
+            "3b90c3d9bd17f19b",
+            "9dad50003e57f1fc",
+            "31d6dfdcf9e1f89a"
+        ],
+        "x": 145,
+        "y": 800,
+        "wires": [
+            [
+                "814a3301a1c8088a",
+                "3ed5c34617bab637"
+            ]
+        ]
+    },
+    {
+        "id": "6a7b21de73455c9f",
+        "type": "ui-form",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "custom - disabled - form",
+        "group": "00f9dbab804c18a6",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Clé",
+                "key": "key",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Valeur",
+                "key": "value",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "key": "",
+            "value": ""
+        },
+        "payload": "",
+        "submit": "Ajouter",
+        "cancel": "",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "bc13aa847a05ed12"
+            ]
+        ]
+    },
+    {
+        "id": "3ed5c34617bab637",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "data",
+        "func": "msg.payload = '';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 860,
+        "wires": [
+            [
+                "6a7b21de73455c9f"
+            ]
+        ]
+    },
+    {
+        "id": "bc13aa847a05ed12",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "data",
+        "func": "if (msg.payload.key !== '' && msg.payload.value !== '') {\n    let disabled = global.get('disabled', 'default');\n    disabled.push([msg.payload.key, msg.payload.value]);\n    msg.payload = '';\n\n    await new Promise(resolve => setTimeout(resolve, 10));\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 860,
+        "wires": [
+            [
+                "31d6dfdcf9e1f89a"
+            ]
+        ]
+    },
+    {
+        "id": "31d6dfdcf9e1f89a",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "custom - disabled",
+        "mode": "link",
+        "links": [
+            "e0be97bd8a7b15f7"
+        ],
+        "x": 835,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "a42d2f408c9c20fc",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "47b156f27ae882b2",
+        "name": "data",
+        "func": "if (msg.action === 'button_click' && msg.column === 'delete') {\n    let disabled = global.get('disabled', 'default');\n    disabled.splice(msg.payload.index, 1);\n    msg.payload = '';\n\n    return msg;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 800,
+        "wires": [
+            [
+                "31d6dfdcf9e1f89a"
+            ]
+        ]
+    },
+    {
+        "id": "3dfcebbb8f4c6556",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "213ea0b067ef32ca",
+        "name": "data",
+        "func": "const controls = global.get('controls', 'memoryOnly') || { };\n\nmsg.payload = [];\n\nfor (const k in controls) {\n    msg.payload.push(controls[k]);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 980,
+        "wires": [
+            [
+                "9545a5a82c6c5ed6"
+            ]
+        ]
+    },
+    {
+        "id": "9545a5a82c6c5ed6",
+        "type": "ui-table",
+        "z": "48135a54600713e8",
+        "g": "213ea0b067ef32ca",
+        "group": "117d5289b94a0fc6",
+        "name": "custom - detail - table",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": "100",
+        "passthru": false,
+        "autocols": false,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [
+            {
+                "title": "Appareil",
+                "key": "device",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
+            },
+            {
+                "title": "Entrée",
+                "key": "entity",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            }
+        ],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 480,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8af6865a1bd655b",
+        "type": "link in",
+        "z": "48135a54600713e8",
+        "g": "213ea0b067ef32ca",
+        "name": "custom - detail",
+        "links": [
+            "3b90c3d9bd17f19b",
+            "9dad50003e57f1fc"
+        ],
+        "x": 145,
+        "y": 980,
+        "wires": [
+            [
+                "3dfcebbb8f4c6556"
+            ]
+        ]
     }
 ]
