@@ -47,16 +47,79 @@ Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant l
 
 Le tableau de bord est disponible sur `http://<ip du serveur docker>:1880/` et l'éditeur Node-RED sur `http://<ip du serveur docker>:1880/admin`.
 
+### Exemple complet avec rfxcom2mqtt
+
+rfxcom2mqtt peut être entièrement configuré par variables d'environnement, sans fichier `config.yml` :
+
+```yaml
+services:
+  rfxcom2mqtt:
+    container_name: rfxcom2mqtt
+    image: rfxcom2mqtt/rfxcom2mqtt
+    restart: unless-stopped
+    volumes:
+      - rfxcom2mqtt:/app/data
+    environment:
+      - TZ=Europe/Paris
+      - MQTT_SERVER=mqtt://192.168.0.11:1883
+      - MQTT_USERNAME=${MQTT_USERNAME}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
+      - RFXCOM_USB_DEVICE=/dev/ttyUSB0
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+  dknr_rfxcom:
+    container_name: dknr_rfxcom
+    image: jcpd/dknr-rfxcom:latest
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+    environment:
+      TZ: Europe/Paris
+      DKNR_USERNAME: ${DKNR_USERNAME}
+      DKNR_PASSWORD: ${DKNR_PASSWORD}
+      DKNR_SECRET: ${DKNR_SECRET}
+    ports:
+      - 1880:1880
+    volumes:
+      - dknr_rfxcom:/data
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/1880' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+volumes:
+  rfxcom2mqtt:
+  dknr_rfxcom:
+```
+
+Les variables `MQTT_USERNAME`, `MQTT_PASSWORD`, `DKNR_USERNAME`, `DKNR_PASSWORD` et `DKNR_SECRET` sont à définir dans un fichier `.env` à côté du `docker-compose.yaml`. Attention, rfxcom2mqtt attend `MQTT_USERNAME` et non `MQTT_USER`.
+
 
 ## Configuration
 
 ### rfxcom2mqtt
 
-Dans le fichier `config.yml` de rfxcom2mqtt :
+Sans fichier `config.yml`, rfxcom2mqtt utilise ses réglages par défaut :
 
-* `mqtt.base_topic` : le topic à renseigner dans dknr-rfxcom (`rfxcom2mqtt` par défaut).
-* `rfxcom.receive` : la liste des protocoles à recevoir (par exemple `temperaturehumidity1`, `lighting2`, `security1`...). Seuls les protocoles listés sont publiés.
-* `homeassistant.discovery` : à passer à `false` si vous utilisez la discovery de dknr-rfxcom, pour éviter d'avoir chaque appareil en double dans Home Assistant.
+* le topic `rfxcom2mqtt`, à renseigner dans dknr-rfxcom ;
+* la réception des protocoles `temperaturehumidity1`, `homeconfort`, `lighting1` à `lighting4`, `remote` et `security1`. Les autres sondes (vent, pluie, énergie, volets...) nécessitent de compléter la liste `rfxcom.receive` dans un fichier `config.yml` placé dans le volume `/app/data` ;
+* sa propre discovery Home Assistant, activée. Les appareils apparaissent alors deux fois dans Home Assistant : ceux de rfxcom2mqtt et ceux de dknr-rfxcom. Pour l'éviter, désactivez l'une des deux : laissez vide le champ discovery de dknr-rfxcom, ou mettez `homeassistant.discovery: false` dans un fichier `config.yml` de rfxcom2mqtt.
 
 ### dknr-rfxcom
 
@@ -95,8 +158,6 @@ Les sondes à plusieurs mesures numérotent leurs entités (`temperature1`, `tem
 ### Piloter une prise ou un interrupteur
 
 Une prise ne répond pas par radio : dknr-rfxcom doit avoir **reçu au moins une fois sa télécommande** pour connaître son protocole et son code. Appuyez une fois sur la télécommande, l'entité `command<unité>` apparaît alors et devient pilotable, y compris après un redémarrage. La commande est transmise à rfxcom2mqtt sur `rfxcom2mqtt/cmd/<type>/<subtype>/<id>/<unité>`.
-
-Le protocole doit aussi être déclaré dans `rfxcom.transmit` de rfxcom2mqtt.
 
 L'état affiché après une commande est l'état demandé : la prise ne confirme pas qu'elle l'a reçu.
 
