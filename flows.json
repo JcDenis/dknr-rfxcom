@@ -234,7 +234,7 @@
             "2c36ae0379904be7"
         ],
         "x": 104,
-        "y": 579,
+        "y": 699,
         "w": 542,
         "h": 142
     },
@@ -273,12 +273,17 @@
             "6bb133ffb6cb4f84",
             "ff417f98ca614605",
             "9f469a49d95475f9",
-            "3634d5248dfe1368"
+            "3634d5248dfe1368",
+            "ae0e175e57698ab1",
+            "275a33e92c1d55c1",
+            "c66173f2002b4916",
+            "b38b45d28d112798",
+            "3a229d57e8cd7d08"
         ],
         "x": 104,
         "y": 399,
         "w": 842,
-        "h": 142
+        "h": 262
     },
     {
         "id": "47b156f27ae882b2",
@@ -301,7 +306,7 @@
             "a42d2f408c9c20fc"
         ],
         "x": 104,
-        "y": 759,
+        "y": 879,
         "w": 772,
         "h": 142
     },
@@ -321,7 +326,7 @@
             "b8af6865a1bd655b"
         ],
         "x": 104,
-        "y": 939,
+        "y": 1059,
         "w": 502,
         "h": 82
     },
@@ -656,7 +661,8 @@
             "4d90b065c71c0bf8",
             "9301624a5887cd8e",
             "6326830faa9d7246",
-            "3634d5248dfe1368"
+            "3634d5248dfe1368",
+            "c66173f2002b4916"
         ],
         "x": 125,
         "y": 500,
@@ -1534,7 +1540,7 @@
         "z": "48135a54600713e8",
         "g": "8f8487859d9ae01f",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-rfxcom';\n\nmsg.payload.hmi = {\n    'detail': 'Voir',\n    'disabled': 'Bloquer',\n    'mqtt': 'Configurer'\n};\n\nglobal.set('disabled', [\n    ['subTypeValue', 'RM174RF']\n], 'default');\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-rfxcom';\n\nmsg.payload.hmi = {\n    'detail': 'Voir',\n    'disabled': 'Bloquer',\n    'mqtt': 'Configurer'\n};\n\nglobal.set('disabled', global.get('disabled', 'default') || [\n    ['subTypeValue', 'RM174RF']\n], 'default');\n\n// rfxcom2mqtt (node-rfxcom) event field: {name, entity, type, unit, ha_type, ha_state, ha_device, options, category}\n// type: number, enum, binary, text / ha_type: sensor, binary_sensor, switch\nmsg.payload.rfxcom = {\n    // weather\n    'temperature': { 'name': 'Température', 'entity': 'temperature', 'type': 'number', 'unit': '°C', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'temperature' },\n    'humidity': { 'name': 'Humidité', 'entity': 'humidity', 'type': 'number', 'unit': '%', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'humidity' },\n    'humidityStatus': { 'name': 'Confort', 'entity': 'humidityStatus', 'type': 'enum', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': 'enum',\n        'options': { '0': 'Normal', '1': 'Confortable', '2': 'Sec', '3': 'Humide' } },\n    'barometer': { 'name': 'Pression', 'entity': 'barometer', 'type': 'number', 'unit': 'hPa', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'atmospheric_pressure' },\n    'forecast': { 'name': 'Prévision', 'entity': 'forecast', 'type': 'enum', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': 'enum',\n        'options': { '0': 'Aucune', '1': 'Ensoleillé', '2': 'Partiellement nuageux', '3': 'Nuageux', '4': 'Pluie' } },\n    'rainfall': { 'name': 'Pluie cumulée', 'entity': 'rainfall', 'type': 'number', 'unit': 'mm', 'ha_type': 'sensor', 'ha_state': 'total_increasing', 'ha_device': 'precipitation' },\n    'rainfallRate': { 'name': 'Intensité de pluie', 'entity': 'rainfallRate', 'type': 'number', 'unit': 'mm/h', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'precipitation_intensity' },\n    'direction': { 'name': 'Direction du vent', 'entity': 'windDirection', 'type': 'number', 'unit': '°', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'averageSpeed': { 'name': 'Vitesse du vent', 'entity': 'windSpeed', 'type': 'number', 'unit': 'm/s', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'wind_speed' },\n    'gustSpeed': { 'name': 'Rafales', 'entity': 'windGust', 'type': 'number', 'unit': 'm/s', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'wind_speed' },\n    'chillfactor': { 'name': 'Température ressentie', 'entity': 'chillFactor', 'type': 'number', 'unit': '°C', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'temperature' },\n    'uv': { 'name': 'Indice UV', 'entity': 'uv', 'type': 'number', 'unit': 'UV index', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': '' },\n    'co2': { 'name': 'CO2', 'entity': 'co2', 'type': 'number', 'unit': 'ppm', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'carbon_dioxide' },\n    'weight': { 'name': 'Poids', 'entity': 'weight', 'type': 'number', 'unit': 'kg', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'weight' },\n    'waterLevel': { 'name': \"Niveau d'eau\", 'entity': 'waterLevel', 'type': 'number', 'unit': 'cm', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'distance' },\n    // energy\n    'power': { 'name': 'Puissance', 'entity': 'power', 'type': 'number', 'unit': 'W', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'power' },\n    'energy': { 'name': 'Energie', 'entity': 'energy', 'type': 'number', 'unit': 'Wh', 'ha_type': 'sensor', 'ha_state': 'total_increasing', 'ha_device': 'energy' },\n    'current': { 'name': 'Intensité', 'entity': 'current', 'type': 'number', 'unit': 'A', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'current' },\n    'voltage': { 'name': 'Tension', 'entity': 'voltage', 'type': 'number', 'unit': 'V', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'voltage' },\n    'powerFactor': { 'name': 'Facteur de puissance', 'entity': 'powerFactor', 'type': 'number', 'unit': '', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'power_factor' },\n    'frequency': { 'name': 'Fréquence', 'entity': 'frequency', 'type': 'number', 'unit': 'Hz', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'frequency' },\n    'counter': { 'name': 'Compteur', 'entity': 'counter', 'type': 'number', 'unit': '', 'ha_type': 'sensor', 'ha_state': 'total_increasing', 'ha_device': '' },\n    // cartelectronic (teleinfo)\n    'compteurWh': { 'name': 'Index', 'entity': 'index', 'type': 'number', 'unit': 'Wh', 'ha_type': 'sensor', 'ha_state': 'total_increasing', 'ha_device': 'energy' },\n    'compteurImpulsions': { 'name': 'Impulsions', 'entity': 'index', 'type': 'number', 'unit': '', 'ha_type': 'sensor', 'ha_state': 'total_increasing', 'ha_device': '' },\n    'puissanceApparente': { 'name': 'Puissance apparente', 'entity': 'apparentPower', 'type': 'number', 'unit': 'VA', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'apparent_power' },\n    'tensionMoyenne': { 'name': 'Tension moyenne', 'entity': 'voltage', 'type': 'number', 'unit': 'V', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'voltage' },\n    'indexTariffaireEnCours': { 'name': 'Index tarifaire', 'entity': 'tariffIndex', 'type': 'number', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'typeContrat': { 'name': 'Contrat', 'entity': 'contract', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'avertissementCouleurAujourdHui': { 'name': \"Couleur aujourd'hui\", 'entity': 'colorToday', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'avertissementCouleurDemain': { 'name': 'Couleur demain', 'entity': 'colorTomorrow', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    // blinds, thermostat, lightning\n    'percent': { 'name': 'Position', 'entity': 'position', 'type': 'number', 'unit': '%', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': '' },\n    'angle': { 'name': 'Inclinaison', 'entity': 'angle', 'type': 'number', 'unit': '°', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': '' },\n    'setpoint': { 'name': 'Consigne', 'entity': 'setpoint', 'type': 'number', 'unit': '°C', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'temperature' },\n    'mode': { 'name': 'Mode', 'entity': 'mode', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'status': { 'name': 'Statut', 'entity': 'status', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    // security\n    'deviceStatus': { 'name': 'Etat', 'entity': 'deviceStatus', 'type': 'enum', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': 'enum',\n        'options': { '0': 'Normal', '1': 'Normal (retardé)', '2': 'Alarme', '3': 'Alarme (retardée)', '4': 'Mouvement', '5': 'Pas de mouvement',\n            '6': 'Panique', '7': 'Fin de panique', '8': 'IR', '9': 'Armé absent', '10': 'Armé absent (retardé)', '11': 'Armé présent',\n            '12': 'Armé présent (retardé)', '13': 'Désarmé' } },\n    'alarm': { 'name': 'Alarme', 'entity': 'alarm', 'type': 'binary', 'unit': '', 'ha_type': 'binary_sensor', 'ha_state': '', 'ha_device': '' },\n    'motion': { 'name': 'Mouvement', 'entity': 'motion', 'type': 'binary', 'unit': '', 'ha_type': 'binary_sensor', 'ha_state': '', 'ha_device': 'motion' },\n    'tampered': { 'name': 'Sabotage', 'entity': 'tampered', 'type': 'binary', 'unit': '', 'ha_type': 'binary_sensor', 'ha_state': '', 'ha_device': 'tamper', 'category': 'diagnostic' },\n    // commands\n    'switch': { 'name': 'Bouton', 'entity': 'command', 'type': 'binary', 'unit': '', 'ha_type': 'switch', 'ha_state': '', 'ha_device': '' },\n    'group': { 'name': 'Groupe', 'entity': 'group', 'type': 'binary', 'unit': '', 'ha_type': 'binary_sensor', 'ha_state': '', 'ha_device': '' },\n    'level': { 'name': 'Variation', 'entity': 'level', 'type': 'number', 'unit': '%', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': '' },\n    'command': { 'name': 'Commande', 'entity': 'command', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': '' },\n    'lastSeen': { 'name': 'Dernier signal', 'entity': 'lastSeen', 'type': 'text', 'unit': '', 'ha_type': 'sensor', 'ha_state': '', 'ha_device': 'timestamp' },\n    // diagnostic\n    'batteryLevel': { 'name': 'Batterie', 'entity': 'batteryLevel', 'type': 'number', 'unit': '%', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'battery', 'category': 'diagnostic' },\n    'batteryVoltage': { 'name': 'Tension batterie', 'entity': 'batteryVoltage', 'type': 'number', 'unit': 'V', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': 'voltage', 'category': 'diagnostic' },\n    'rssi': { 'name': 'Signal', 'entity': 'rssi', 'type': 'number', 'unit': '%', 'ha_type': 'sensor', 'ha_state': 'measurement', 'ha_device': '', 'category': 'diagnostic' }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1625,10 +1631,11 @@
         "g": "c2a4c908aa1cf2e9",
         "name": "custom - discovery",
         "links": [
-            "2b841cb3792eb18d"
+            "2b841cb3792eb18d",
+            "3a229d57e8cd7d08"
         ],
         "x": 145,
-        "y": 620,
+        "y": 740,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -1650,7 +1657,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 680,
+        "y": 800,
         "wires": []
     },
     {
@@ -1676,7 +1683,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 290,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "2c36ae0379904be7"
@@ -1694,7 +1701,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 585,
-        "y": 620,
+        "y": 740,
         "wires": []
     },
     {
@@ -1716,7 +1723,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 470,
-        "y": 620,
+        "y": 740,
         "wires": [
             [
                 "6326830faa9d7246"
@@ -1729,7 +1736,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'rfxcom';\n\n//...\nfor (const k in controls) {\n    // topic as uid must be source _ id _ entry\n    let dknrMsg = {\n        'topic': [topic, 'discovery', source, controls[k]['device'], controls[k]['entity']].join('/'),\n        'payload': {\n            'name': controls[k]['name'],\n            'group': controls[k]['group'],\n            'type': controls[k]['type'],\n            'unit': controls[k]['unit'],\n            'value': controls[k]['value'],\n            'options': {}\n        },\n        'qos': 0,\n        'retain': true\n    };\n\n    node.send(dknrMsg);\n\n    // ha\n    msg.topic = ha_topic + '/' + controls[k]['ha_type'] + '/rfxcom/' + controls[k]['device'] + '_' + controls[k]['entity'] + '/config';\n\n    if (controls[k]['ha_type'] === 'sensor') {\n        msg.payload = {\n            'unique_id': ['dknr', source, controls[k]['device'], controls[k]['entity']].join('_'),\n            'name': controls[k]['name'],\n            'state_topic': [topic, 'get', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'state_class': controls[k]['ha_state'],\n            'device_class': controls[k]['ha_device'],\n            'unit_of_measurement': controls[k]['unit'],\n            'device': {\n                'identifiers': [\n                    controls[k]['device']\n                ],\n                'manufacturer': 'RFXCom',\n                'model': 'rfxcom ' + controls[k]['device'],\n                'name': 'RFXCom ' + controls[k]['device']\n            }\n        };\n\n        node.send(msg);\n    }\n    else if (controls[k]['ha_type'] === 'switch') {\n        msg.payload = {\n            'unique_id': ['dknr', source, controls[k]['device'], controls[k]['entity']].join('_'),\n            'name': controls[k]['name'],\n            'payload_off': 0,\n            'payload_on': 1,\n            'state_off': 0,\n            'state_on': 1,\n            'command_topic': [topic, 'set', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'state_topic': [topic, 'get', source, controls[k]['device'], controls[k]['entity']].join('/'),\n            'device': {\n                'identifiers': [\n                    controls[k]['device']\n                ],\n                'manufacturer': 'RFXCom',\n                'model': 'rfxcom ' + controls[k]['device'],\n                'name': 'RFXCom ' + controls[k]['device']\n            }\n        };\n\n        node.send(msg);\n    }\n}\n\nreturn;",
+        "func": "\n// DKNR MQTT topic\nconst enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nif (!enabled || topic === '') {\n\n    return;\n}\n\nconst ha_topic = global.get('mqtt.homeassistant', 'default') || '';\n\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst source = 'rfxcom';\n\nfor (const k in controls) {\n    const c = controls[k];\n\n    // topic as uid must be source _ id _ entry\n    node.send({\n        'topic': [topic, 'discovery', source, c.device, c.entity].join('/'),\n        'payload': {\n            'name': c.name,\n            'group': c.group,\n            'type': c.type,\n            'unit': c.unit,\n            'value': c.value,\n            'options': c.options || {}\n        },\n        'qos': 0,\n        'retain': true\n    });\n\n    // ha\n    if (ha_topic === '') {\n\n        continue;\n    }\n\n    let payload = {\n        'unique_id': ['dknr', source, c.device, c.entity].join('_'),\n        'name': c.name,\n        'state_topic': [topic, 'get', source, c.device, c.entity].join('/'),\n        'device': {\n            'identifiers': [\n                c.device\n            ],\n            'manufacturer': 'RFXCom',\n            'model': c.model || 'rfxcom ' + c.device,\n            'name': 'RFXCom ' + c.device\n        }\n    };\n\n    if (c.ha_category !== '' && c.ha_category !== undefined) {\n        payload.entity_category = c.ha_category;\n    }\n\n    if (c.ha_type === 'sensor') {\n        if (c.unit !== '') {\n            payload.unit_of_measurement = c.unit;\n        }\n        if (c.ha_state !== '') {\n            payload.state_class = c.ha_state;\n        }\n        if (c.ha_device !== '') {\n            payload.device_class = c.ha_device;\n        }\n        if (c.ha_device === 'enum') {\n            payload.options = [...new Set(Object.values(c.options || {}))];\n        }\n    }\n    else if (c.ha_type === 'binary_sensor') {\n        payload.payload_on = 'ON';\n        payload.payload_off = 'OFF';\n        if (c.ha_device !== '') {\n            payload.device_class = c.ha_device;\n        }\n    }\n    else if (c.ha_type === 'switch') {\n        payload.command_topic = [topic, 'set', source, c.device, c.entity].join('/');\n        payload.payload_on = 'ON';\n        payload.payload_off = 'OFF';\n        payload.state_on = 'ON';\n        payload.state_off = 'OFF';\n    }\n    else {\n\n        continue;\n    }\n\n    node.send({\n        'topic': [ha_topic, c.ha_type, source, c.device + '_' + c.entity, 'config'].join('/'),\n        'payload': payload,\n        'qos': 0,\n        'retain': true\n    });\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1737,7 +1744,7 @@
         "finalize": "",
         "libs": [],
         "x": 300,
-        "y": 620,
+        "y": 740,
         "wires": [
             [
                 "ace85f776ce24777",
@@ -1806,11 +1813,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 430,
-        "y": 440,
+        "x": 290,
+        "y": 500,
         "wires": [
             [
-                "ff417f98ca614605"
+                "ae0e175e57698ab1"
             ]
         ]
     },
@@ -1837,14 +1844,14 @@
         "z": "48135a54600713e8",
         "g": "08e1b451f78dbc6f",
         "name": "data",
-        "func": "const mqtt = global.get('mqtt', 'default') || { };\nif (!mqtt.enabled || typeof mqtt.source !== 'string' || mqtt.source === '') {\n    node.status({ 'fill': 'red', 'text': 'settings nok' });\n    \n    return;\n}\n\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.broker = {};\nmsg.broker.broker = mqtt.host;\nmsg.broker.port = mqtt.port;\nmsg.broker.username = mqtt.username;\nmsg.broker.password = mqtt.password;\n\nmsg.broker.force = true;\nmsg.action = 'connect';\n\nnode.send([msg]);\n\ndelete msg.broker;\n\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.action = 'subscribe';\nmsg.qos = 1;\n\nnode.send([msg]);\n\nnode.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\nreturn;",
+        "func": "const mqtt = global.get('mqtt', 'default') || { };\nif (!mqtt.enabled || typeof mqtt.source !== 'string' || mqtt.source === '') {\n    node.status({ 'fill': 'red', 'text': 'settings nok' });\n\n    return;\n}\n\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.broker = {};\nmsg.broker.broker = mqtt.host;\nmsg.broker.port = mqtt.port;\nmsg.broker.username = mqtt.username;\nmsg.broker.password = mqtt.password;\n\nmsg.broker.force = true;\nmsg.action = 'connect';\n\nnode.send([RED.util.cloneMessage(msg)]);\n\ndelete msg.broker;\n\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\n// rfxcom2mqtt devices messages\nmsg.topic = [mqtt.source, 'devices', '#'].join('/');\nmsg.payload = '';\nmsg.action = 'subscribe';\nmsg.qos = 1;\n\nnode.send([RED.util.cloneMessage(msg)]);\n\n// DKNR commands: topic / set / rfxcom / device / entity\nif (typeof mqtt.topic === 'string' && mqtt.topic !== '') {\n    msg.topic = [mqtt.topic, 'set', 'rfxcom', '#'].join('/');\n\n    node.send([RED.util.cloneMessage(msg)]);\n}\n\nnode.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
+        "x": 290,
         "y": 440,
         "wires": [
             [
@@ -1858,7 +1865,65 @@
         "z": "48135a54600713e8",
         "g": "08e1b451f78dbc6f",
         "name": "data",
-        "func": "// Remove this type\nconst disabled = global.get('disabled', 'default');\nfor (let i = 0; i< disabled.length; i++) {\n    if (Object.hasOwn(msg.payload, disabled[i][0]) && msg.payload[disabled[i][0]] === disabled[i][1]) {\n\n        return;\n    }\n}\n\nif (typeof global.get('controls', 'memoryOnly') !== 'object') {\n    global.set('controls', { }, 'memoryOnly');\n    await new Promise(resolve => setTimeout(resolve, 10));\n}\n\nconst topic = global.get('mqtt.topic');\nconst source = 'rfxcom';\n\nconst path = msg.topic.split('/');\nif (path.length < 2) {\n\n    return;\n}\n\nlet device = path.pop();\nif (device === 'devices') {\n\n    return;\n}\nlet sub = path.pop();\nif (sub !== 'devices') {\n    device = sub;//(sub + '-' + device).slice(2);\n}\ndevice = device.slice(2);\nlet value = '';\n\nlet controls = global.get('controls', 'memoryOnly');\n\nfor (let entity in msg.payload) {\n    let exists = true;\n    let control = {\n        'device': device,\n        'entity': entity,\n        'name': '',\n        'group': 'sensor',\n        'type': 'number',\n        'unit': '',\n        'value': 0,\n        'options': {},\n        'ha_type': 'sensor',\n        'ha_state': 'measurement',\n        'ha_device': 'none'\n    };\n\n    switch (entity) {\n        case 'batteryLevel':\n            value = msg.payload.batteryLevel * 10;\n\n            control.name = 'Batterie';\n            control.unit = '%';\n            control.ha_device = 'battery';\n            break;\n        case 'rssi':\n            value = msg.payload.rssi;\n\n            control.name = 'Signal';\n            control.unit = 'dBm';\n            control.ha_device = 'signal_strength';\n            break;\n        case 'command':\n            value = msg.payload[entity] == 'On' ? 1 : 0;\n            entity = 'command' + msg.payload.unitCode;\n\n            control.entity = entity;\n            control.name = 'Bouton ' + msg.payload.unitCode;\n            control.ha_type = 'switch';\n            break;\n        case 'humidity':\n            value = msg.payload.humidity;\n\n            control.name = 'Humidité';\n            control.unit = '%';\n            control.ha_device = 'humidity';\n            break;\n        case 'temperature':\n            value = msg.payload.temperature;\n\n            control.name = 'Température';\n            control.unit = '°C';\n            control.ha_device = 'temperature';\n            break;\n        default:\n            exists = false;\n    }\n    \n    if (exists) {\n        let uid = device + '_' + entity;\n\n        controls[uid] = { ...control };\n\n        if (flow.get('last[\"' + uid + '\"]', 'memoryOnly') !== value) {\n            flow.set('last[\"' + uid + '\"]', value, 'memoryOnly');\n\n            let dknr = {\n                'topic': [topic, 'get', source, device, entity].join('/'),\n                'payload': value,\n                'qos': 0,\n                'retain': false\n            };\n\n            node.send([dknr]);\n        }\n\n        await new Promise(resolve => setTimeout(resolve, 10));\n    }\n}\n\n\nreturn;",
+        "func": "// Translate rfxcom2mqtt message (node-rfxcom event) to DKNR entities\n// output 1: DKNR MQTT values / output 2: new entity found (discovery)\n\nconst p = msg.payload;\nif (typeof p !== 'object' || p === null || Array.isArray(p) || typeof p.type !== 'string') {\n\n    return;\n}\n\n// Remove this type\nconst disabled = global.get('disabled', 'default') || [];\nfor (let i = 0; i < disabled.length; i++) {\n    if (Object.hasOwn(p, disabled[i][0]) && String(p[disabled[i][0]]) === String(disabled[i][1])) {\n\n        return;\n    }\n}\n\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst defs = describe.rfxcom || {};\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst source = 'rfxcom';\n\n// Device identifier, without 0x\nconst rawId = p.type === 'lighting4' ? p.data : p.id;\nif (typeof rawId !== 'string' || rawId === '') {\n\n    return;\n}\nconst device = rawId.replace(/^0x/i, '');\nconst controls = global.get('controls', 'memoryOnly') || {};\n\n// Device model, keep the one already known when this event does not give it\nlet model = Array.isArray(p.deviceName) ? p.deviceName.filter(n => n !== '').join(', ') : (p.deviceName || '');\nif (model === '') {\n    const known = Object.values(controls).find(c => c.device === device && c.model);\n    model = known ? known.model : (p.subTypeValue || p.type);\n}\nconst commands = global.get('commands', 'default') || {};\nlet added = false;\nlet values = [];\n\n// Register an entity value\nfunction add(key, value, suffix, display) {\n    const def = defs[key];\n    if (typeof def !== 'object' || value === undefined || value === null || (typeof value === 'number' && isNaN(value))) {\n\n        return;\n    }\n\n    const entity = def.entity + (suffix || '');\n    const uid = device + '_' + entity;\n\n    if (typeof controls[uid] !== 'object') {\n        added = true;\n    }\n\n    controls[uid] = {\n        'device': device,\n        'entity': entity,\n        'name': def.name + (suffix ? ' ' + suffix : ''),\n        'group': def.ha_type === 'switch' ? 'command' : 'sensor',\n        'type': def.type,\n        'unit': def.unit,\n        'value': value,\n        'display': display !== undefined ? display : String(value) + (def.unit ? ' ' + def.unit : ''),\n        'options': def.options || {},\n        'ha_type': def.ha_type,\n        'ha_state': def.ha_state,\n        'ha_device': def.ha_device,\n        'ha_category': def.category || '',\n        'model': model,\n        'rfxtype': p.type\n    };\n\n    values.push([uid, entity, value]);\n}\n\nfunction round(v, d) {\n    const f = Math.pow(10, d);\n\n    return Math.round(v * f) / f;\n}\n\n// ---- commands (switches, remotes, doorbells...)\nconst switchTypes = ['lighting1', 'lighting2', 'lighting5', 'lighting6'];\nconst command = typeof p.command === 'string' ? p.command.toLowerCase() : '';\nconst isOn = ['on', 'group on', 'all on', 'set level', 'set group level'].includes(command);\nconst isOff = ['off', 'group off', 'all off'].includes(command);\n\nif (switchTypes.includes(p.type) && (isOn || isOff)) {\n    const state = isOn ? 'ON' : 'OFF';\n    if (p.group === true || command.startsWith('group') || command.startsWith('all')) {\n        add('group', state, '', isOn ? 'Allumé' : 'Eteint');\n    } else {\n        const unit = p.unitCode !== undefined ? p.unitCode : 1;\n        add('switch', state, String(unit), isOn ? 'Allumé' : 'Eteint');\n\n        // keep what is needed to send command back through rfxcom2mqtt\n        commands[device + '_' + defs['switch'].entity + unit] = {\n            'type': p.type,\n            'subtype': p.subtype,\n            'id': p.id,\n            'unit': unit\n        };\n        global.set('commands', commands, 'default');\n\n        if (p.type === 'lighting2' && command.includes('level') && typeof p.level === 'number') {\n            add('level', Math.round(p.level / 15 * 100), String(unit));\n        }\n    }\n} else if (typeof p.command === 'string' && p.command !== '' && p.command !== 'Unknown') {\n    add('command', p.command, p.unitCode !== undefined ? String(p.unitCode) : '');\n    add('lastSeen', new Date().toISOString(), '', new Date().toLocaleString('fr-FR', { 'timeZone': env.get('TZ') || 'Europe/Paris' }));\n}\n\n// ---- sensors\nfor (const key in p) {\n    let v = p[key];\n\n    switch (key) {\n        case 'temperature':\n        case 'current':\n            if (Array.isArray(v)) {\n                v.forEach((x, i) => add(key, round(x, 2), String(i + 1)));\n            } else {\n                add(key, round(v, 2));\n            }\n            break;\n        case 'humidityStatus':\n        case 'forecast':\n        case 'deviceStatus':\n            add(key, defs[key].options[String(v)], '', defs[key].options[String(v)]);\n            if (key === 'deviceStatus') {\n                if (v === 4 || v === 5) {\n                    add('motion', v === 4 ? 'ON' : 'OFF', '', v === 4 ? 'Oui' : 'Non');\n                } else if (v >= 0 && v <= 3) {\n                    add('alarm', v >= 2 ? 'ON' : 'OFF', '', v >= 2 ? 'Oui' : 'Non');\n                }\n            }\n            break;\n        case 'tampered':\n            add(key, v ? 'ON' : 'OFF', '', v ? 'Oui' : 'Non');\n            break;\n        case 'batteryLevel':\n            // 0 to 9, 9 is full\n            add(key, Math.min(100, (Number(v) + 1) * 10));\n            break;\n        case 'rssi':\n            // 0 to 15\n            add(key, Math.round(Number(v) / 15 * 100));\n            break;\n        case 'energy':\n            add(key, round(v, 1));\n            break;\n        case 'level':\n            if (p.type === 'waterlevel') {\n                add('waterLevel', v);\n            }\n            break;\n        case 'compteur':\n            if (Array.isArray(v)) {\n                v.forEach((c, i) => {\n                    if (typeof c === 'object' && c !== null) {\n                        add(c['unité'] === 'Wh' ? 'compteurWh' : 'compteurImpulsions', c.valeur, String(i + 1));\n                    }\n                });\n            }\n            break;\n        case 'humidity':\n        case 'barometer':\n        case 'rainfall':\n        case 'rainfallRate':\n        case 'direction':\n        case 'averageSpeed':\n        case 'gustSpeed':\n        case 'chillfactor':\n        case 'uv':\n        case 'co2':\n        case 'weight':\n        case 'power':\n        case 'voltage':\n        case 'powerFactor':\n        case 'frequency':\n        case 'counter':\n        case 'batteryVoltage':\n        case 'percent':\n        case 'angle':\n        case 'setpoint':\n        case 'indexTariffaireEnCours':\n        case 'tensionMoyenne':\n            add(key, typeof v === 'number' ? round(v, 2) : v);\n            break;\n        case 'puissanceApparente':\n            if (p.puissanceApparenteValide !== false) {\n                add(key, v);\n            }\n            break;\n        case 'mode':\n        case 'status':\n        case 'typeContrat':\n        case 'avertissementCouleurAujourdHui':\n        case 'avertissementCouleurDemain':\n            if (typeof v === 'string' && v !== '') {\n                add(key, v);\n            }\n            break;\n    }\n}\n\nglobal.set('controls', controls, 'memoryOnly');\n\n// ---- DKNR values, only on change\nfor (const [uid, entity, value] of values) {\n    if (flow.get('last[\"' + uid + '\"]', 'memoryOnly') === value) {\n\n        continue;\n    }\n    flow.set('last[\"' + uid + '\"]', value, 'memoryOnly');\n\n    if (topic !== '') {\n        node.send([{\n            'topic': [topic, 'get', source, device, entity].join('/'),\n            'payload': value,\n            'qos': 0,\n            'retain': false\n        }, null]);\n    }\n}\n\nnode.status({ 'fill': 'green', 'shape': 'dot', 'text': device + ' (' + p.type + ') : ' + values.length });\n\nif (added) {\n    node.send([null, { 'payload': 'discovery' }]);\n}\n\nreturn;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "9f469a49d95475f9",
+                "3634d5248dfe1368"
+            ],
+            [
+                "b38b45d28d112798"
+            ]
+        ]
+    },
+    {
+        "id": "ae0e175e57698ab1",
+        "type": "switch",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "route",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^[^/]+/set/rfxcom/",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "275a33e92c1d55c1"
+            ],
+            [
+                "ff417f98ca614605"
+            ]
+        ]
+    },
+    {
+        "id": "275a33e92c1d55c1",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "control",
+        "func": "// DKNR command: topic / set / rfxcom / device / entity = ON, OFF\n// sent to rfxcom2mqtt: source / cmd / type / subtype / id / unit = On, Off\n\nconst mqtt = global.get('mqtt', 'default') || {};\nconst commands = global.get('commands', 'default') || {};\nconst source = 'rfxcom';\n\nconst path = msg.topic.split('/');\nif (path.length < 5) {\n\n    return;\n}\n\nconst entity = path.pop();\nconst device = path.pop();\nconst cmd = commands[device + '_' + entity];\nconst value = (msg.payload === undefined || msg.payload === null ? '' : msg.payload).toString().trim().toUpperCase();\n\nif (typeof cmd !== 'object') {\n    node.status({ 'fill': 'red', 'shape': 'ring', 'text': device + ' - ' + entity + ' : inconnu' });\n\n    return;\n}\n\nlet state = '';\nif (['ON', '1', 'TRUE'].includes(value)) {\n    state = 'ON';\n} else if (['OFF', '0', 'FALSE'].includes(value)) {\n    state = 'OFF';\n} else {\n    node.status({ 'fill': 'red', 'shape': 'ring', 'text': device + ' - ' + entity + ' : ' + value + ' ?' });\n\n    return;\n}\n\nif (typeof mqtt.source !== 'string' || mqtt.source === '') {\n\n    return;\n}\n\nnode.status({ 'fill': 'green', 'shape': 'dot', 'text': device + ' - ' + entity + ' - ' + state });\n\n// Optimistic state, the device does not answer\nflow.set('last[\"' + device + '_' + entity + '\"]', state, 'memoryOnly');\nconst controls = global.get('controls', 'memoryOnly') || {};\nif (typeof controls[device + '_' + entity] === 'object') {\n    controls[device + '_' + entity].value = state;\n    controls[device + '_' + entity].display = state === 'ON' ? 'Allumé' : 'Eteint';\n    global.set('controls', controls, 'memoryOnly');\n}\n\nnode.send({\n    'topic': [mqtt.source, 'cmd', cmd.type, cmd.subtype, cmd.id, cmd.unit].join('/'),\n    'payload': state === 'ON' ? 'On' : 'Off',\n    'qos': 1,\n    'retain': false\n});\n\nnode.send({\n    'topic': [mqtt.topic, 'get', source, device, entity].join('/'),\n    'payload': state,\n    'qos': 0,\n    'retain': false\n});\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1866,13 +1931,66 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 440,
+        "y": 560,
         "wires": [
             [
-                "9f469a49d95475f9",
-                "3634d5248dfe1368"
+                "c66173f2002b4916"
             ]
         ]
+    },
+    {
+        "id": "c66173f2002b4916",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "custom - mqtt - source - control",
+        "mode": "link",
+        "links": [
+            "6bfb1868b6a98f04"
+        ],
+        "x": 755,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b38b45d28d112798",
+        "type": "trigger",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "5s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 750,
+        "y": 620,
+        "wires": [
+            [
+                "3a229d57e8cd7d08"
+            ]
+        ]
+    },
+    {
+        "id": "3a229d57e8cd7d08",
+        "type": "link out",
+        "z": "48135a54600713e8",
+        "g": "08e1b451f78dbc6f",
+        "name": "custom - mqtt - source - discovery",
+        "mode": "link",
+        "links": [
+            "b66aceda104390c6"
+        ],
+        "x": 885,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "9f469a49d95475f9",
@@ -1888,8 +2006,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 500,
+        "x": 760,
+        "y": 440,
         "wires": []
     },
     {
@@ -1903,7 +2021,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 715,
-        "y": 440,
+        "y": 500,
         "wires": []
     },
     {
@@ -1954,7 +2072,7 @@
         "action": "replace",
         "className": "",
         "x": 490,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "a42d2f408c9c20fc"
@@ -1975,7 +2093,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "3ba5fde99aa0111f"
@@ -1994,7 +2112,7 @@
             "31d6dfdcf9e1f89a"
         ],
         "x": 145,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "814a3301a1c8088a",
@@ -2044,7 +2162,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 490,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "bc13aa847a05ed12"
@@ -2065,7 +2183,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "6a7b21de73455c9f"
@@ -2086,7 +2204,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "31d6dfdcf9e1f89a"
@@ -2104,7 +2222,7 @@
             "e0be97bd8a7b15f7"
         ],
         "x": 835,
-        "y": 800,
+        "y": 920,
         "wires": []
     },
     {
@@ -2121,7 +2239,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 800,
+        "y": 920,
         "wires": [
             [
                 "31d6dfdcf9e1f89a"
@@ -2134,7 +2252,7 @@
         "z": "48135a54600713e8",
         "g": "213ea0b067ef32ca",
         "name": "data",
-        "func": "const controls = global.get('controls', 'memoryOnly') || { };\n\nmsg.payload = [];\n\nfor (const k in controls) {\n    msg.payload.push(controls[k]);\n}\n\nreturn msg;",
+        "func": "const controls = global.get('controls', 'memoryOnly') || { };\n\nmsg.payload = [];\n\nfor (const k of Object.keys(controls).sort()) {\n    msg.payload.push({\n        'device': controls[k].device,\n        'model': controls[k].model || '',\n        'name': controls[k].name,\n        'value': controls[k].display !== undefined ? controls[k].display : String(controls[k].value)\n    });\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2142,7 +2260,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 980,
+        "y": 1100,
         "wires": [
             [
                 "9545a5a82c6c5ed6"
@@ -2173,15 +2291,31 @@
                 "keyType": "key",
                 "type": "text",
                 "width": "",
-                "align": "end"
+                "align": "start"
             },
             {
-                "title": "Entrée",
-                "key": "entity",
+                "title": "Modèle",
+                "key": "model",
                 "keyType": "key",
                 "type": "text",
                 "width": "",
                 "align": "start"
+            },
+            {
+                "title": "Entrée",
+                "key": "name",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "start"
+            },
+            {
+                "title": "Valeur",
+                "key": "value",
+                "keyType": "key",
+                "type": "text",
+                "width": "",
+                "align": "end"
             }
         ],
         "mobileBreakpoint": "sm",
@@ -2189,7 +2323,7 @@
         "action": "replace",
         "className": "",
         "x": 480,
-        "y": 980,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -2205,7 +2339,7 @@
             "9dad50003e57f1fc"
         ],
         "x": 145,
-        "y": 980,
+        "y": 1100,
         "wires": [
             [
                 "3dfcebbb8f4c6556"
