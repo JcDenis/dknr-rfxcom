@@ -912,8 +912,9 @@
         "mode": "link",
         "links": [
             "b5364a44ccea95f0",
-            "e344ab0a1e1ea77b",
-            "b66aceda104390c6"
+            "b66aceda104390c6",
+            "cd01ae81b8993637",
+            "e344ab0a1e1ea77b"
         ],
         "x": 915,
         "y": 980,
@@ -1837,7 +1838,8 @@
         "g": "08e1b451f78dbc6f",
         "name": "custom - mqtt - source",
         "links": [
-            "3b90c3d9bd17f19b"
+            "3b90c3d9bd17f19b",
+            "2b841cb3792eb18d"
         ],
         "x": 145,
         "y": 500,
