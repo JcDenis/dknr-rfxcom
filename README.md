@@ -147,7 +147,7 @@ Un RFXtrx reçoit aussi les sondes et télécommandes du voisinage. Dans la page
 Avec le topic `dknr` par défaut, l'identifiant d'un appareil est son identifiant RFXCom sans `0x` (`5C02` pour `0x5C02`) :
 
 * `dknr/get/rfxcom/<appareil>/<entité>` : valeurs publiées à chaque changement.
-* `dknr/set/rfxcom/<appareil>/command<unité>` : `ON` ou `OFF` pour piloter une prise ou un interrupteur.
+* `dknr/set/rfxcom/<appareil>/command<unité>` : `1` ou `0` (`ON` et `OFF` sont aussi acceptés) pour piloter une prise ou un interrupteur. Les états binaires sont publiés en `1` ou `0`.
 * `dknr/discovery/rfxcom/<appareil>/<entité>` : description des entités.
 * `homeassistant/<type>/rfxcom/<appareil>_<entité>/config` : Home Assistant Discovery.
 
